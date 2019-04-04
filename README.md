@@ -1,1 +1,0 @@
-# jobtech-taxonomy-api-consumer-example
