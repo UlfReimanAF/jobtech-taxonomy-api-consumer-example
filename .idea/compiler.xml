@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-swagger-codegen-api-client" />
+        <module name="jobtech-taxonomy-api-consumer-example" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="jobtech-taxonomy-api-consumer-example" target="1.5" />
       <module name="spring-swagger-codegen-api-client" target="1.7" />
     </bytecodeTargetLevel>
   </component>
