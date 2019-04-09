@@ -75,7 +75,7 @@ public class ApiClient {
     
     private HttpHeaders defaultHeaders = new HttpHeaders();
     
-    private String basePath = "https://localhost";
+    private String basePath = "http://localhost:3000";
 
     private RestTemplate restTemplate;
 
@@ -522,6 +522,9 @@ public class ApiClient {
         if(contentType != null) {
             requestBuilder.contentType(contentType);
         }
+
+        //
+        headerParams.add("api-key", "45c1f5e3f05d0");
         
         addHeadersToRequest(headerParams, requestBuilder);
         addHeadersToRequest(defaultHeaders, requestBuilder);
@@ -635,7 +638,9 @@ public class ApiClient {
                 builder.setLength(builder.length() - 1); // Get rid of trailing comma
                 builder.append("],");
             }
-            builder.setLength(builder.length() - 1); // Get rid of trailing comma
+            builder.setLength(builder.length() - 1);
+            System.out.println(builder.toString());
+            // Get rid of trailing comma
             return builder.toString();
         }
         
