@@ -14,33 +14,47 @@
 package se.jobtech.taxonomy.client.api;
 
 import org.junit.Test;
-import org.junit.Ignore;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * API tests for DefaultApi
  */
-@Ignore
+
 public class DefaultApiTest {
 
-    private final DefaultApi api = new DefaultApi();
+    private final DefaultApi api = new DefaultApi( );
 
 
     /**
-     *
-     *
-     *
-     *
-     * @throws
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void authenticatedGetTest() {
-        api.authenticatedGet();
+        api.authenticatedGet( );
+
+        // TODO: test validations
+    }
+
+    /**
+     * Relation graphs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void relationGraphGetTest() {
+        String relationType = "Jobtech";
+        String response = api.relationGraphGet( relationType );
+
+        // TODO: test validations
+    }
+
+    /**
+     * Relation graphs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void relationTypesGetTest() {
+        String response = api.relationTypesGet( );
 
         // TODO: test validations
     }

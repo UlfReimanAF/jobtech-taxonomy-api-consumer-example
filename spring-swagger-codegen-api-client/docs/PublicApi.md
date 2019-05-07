@@ -1,19 +1,106 @@
 # PublicApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *http://localhost:3000*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**taxonomyPublicApiConceptHistorySinceGet**](PublicApi.md#taxonomyPublicApiConceptHistorySinceGet) | **GET** /taxonomy/public-api/concept-history-since | Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
-[**taxonomyPublicApiDeprecatedConceptHistorySinceGet**](PublicApi.md#taxonomyPublicApiDeprecatedConceptHistorySinceGet) | **GET** /taxonomy/public-api/deprecated-concept-history-since | Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
-[**taxonomyPublicApiFullHistoryGet**](PublicApi.md#taxonomyPublicApiFullHistoryGet) | **GET** /taxonomy/public-api/full-history | Show the complete history.
-[**taxonomyPublicApiTermGet**](PublicApi.md#taxonomyPublicApiTermGet) | **GET** /taxonomy/public-api/term | Search for a term across all taxonomies.
-[**taxonomyPublicApiTermPartGet**](PublicApi.md#taxonomyPublicApiTermPartGet) | **GET** /taxonomy/public-api/term-part | get concepts by part of string
+[**taxonomyPublicConceptAllGet**](PublicApi.md#taxonomyPublicConceptAllGet) | **GET** /taxonomy/public/concept/all | Read all concepts of the given type.
+[**taxonomyPublicConceptGet**](PublicApi.md#taxonomyPublicConceptGet) | **GET** /taxonomy/public/concept | Read a concept by ID.
+[**taxonomyPublicConceptHistorySinceGet**](PublicApi.md#taxonomyPublicConceptHistorySinceGet) | **GET** /taxonomy/public/concept-history-since | Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
+[**taxonomyPublicConceptTypesGet**](PublicApi.md#taxonomyPublicConceptTypesGet) | **GET** /taxonomy/public/concept/types | Read a list of all taxonomy types.
+[**taxonomyPublicDeprecatedConceptHistorySinceGet**](PublicApi.md#taxonomyPublicDeprecatedConceptHistorySinceGet) | **GET** /taxonomy/public/deprecated-concept-history-since | Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
+[**taxonomyPublicFullHistoryGet**](PublicApi.md#taxonomyPublicFullHistoryGet) | **GET** /taxonomy/public/full-history | Show the complete history.
+[**taxonomyPublicTermGet**](PublicApi.md#taxonomyPublicTermGet) | **GET** /taxonomy/public/term | Search for a term across all taxonomies.
+[**taxonomyPublicTermPartGet**](PublicApi.md#taxonomyPublicTermPartGet) | **GET** /taxonomy/public/term-part | get concepts by part of string
 
 
-<a name="taxonomyPublicApiConceptHistorySinceGet"></a>
-# **taxonomyPublicApiConceptHistorySinceGet**
-> List&lt;Response38765&gt; taxonomyPublicApiConceptHistorySinceGet(dateTime)
+<a name="taxonomyPublicConceptAllGet"></a>
+# **taxonomyPublicConceptAllGet**
+> taxonomyPublicConceptAllGet(type)
+
+Read all concepts of the given type.
+
+### Example
+```java
+// Import classes:
+//import se.jobtech.taxonomy.client.invoker.ApiException;
+//import se.jobtech.taxonomy.client.api.PublicApi;
+
+
+PublicApi apiInstance = new PublicApi();
+String type = "type_example"; // String | 
+try {
+    apiInstance.taxonomyPublicConceptAllGet(type);
+} catch (ApiException e) {
+    System.err.println("Exception when calling PublicApi#taxonomyPublicConceptAllGet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **String**|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
+ - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
+
+<a name="taxonomyPublicConceptGet"></a>
+# **taxonomyPublicConceptGet**
+> taxonomyPublicConceptGet(id)
+
+Read a concept by ID.
+
+### Example
+```java
+// Import classes:
+//import se.jobtech.taxonomy.client.invoker.ApiException;
+//import se.jobtech.taxonomy.client.api.PublicApi;
+
+
+PublicApi apiInstance = new PublicApi();
+String id = "id_example"; // String | 
+try {
+    apiInstance.taxonomyPublicConceptGet(id);
+} catch (ApiException e) {
+    System.err.println("Exception when calling PublicApi#taxonomyPublicConceptGet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
+ - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
+
+<a name="taxonomyPublicConceptHistorySinceGet"></a>
+# **taxonomyPublicConceptHistorySinceGet**
+> List&lt;Response38930&gt; taxonomyPublicConceptHistorySinceGet(dateTime)
 
 Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
 
@@ -27,10 +114,10 @@ Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 
 PublicApi apiInstance = new PublicApi();
 String dateTime = "dateTime_example"; // String | 
 try {
-    List<Response38765> result = apiInstance.taxonomyPublicApiConceptHistorySinceGet(dateTime);
+    List<Response38930> result = apiInstance.taxonomyPublicConceptHistorySinceGet(dateTime);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PublicApi#taxonomyPublicApiConceptHistorySinceGet");
+    System.err.println("Exception when calling PublicApi#taxonomyPublicConceptHistorySinceGet");
     e.printStackTrace();
 }
 ```
@@ -43,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;Response38765&gt;**](Response38765.md)
+[**List&lt;Response38930&gt;**](Response38930.md)
 
 ### Authorization
 
@@ -54,9 +141,47 @@ No authorization required
  - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
  - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
 
-<a name="taxonomyPublicApiDeprecatedConceptHistorySinceGet"></a>
-# **taxonomyPublicApiDeprecatedConceptHistorySinceGet**
-> ERRORUNKNOWN taxonomyPublicApiDeprecatedConceptHistorySinceGet(dateTime)
+<a name="taxonomyPublicConceptTypesGet"></a>
+# **taxonomyPublicConceptTypesGet**
+> taxonomyPublicConceptTypesGet()
+
+Read a list of all taxonomy types.
+
+### Example
+```java
+// Import classes:
+//import se.jobtech.taxonomy.client.invoker.ApiException;
+//import se.jobtech.taxonomy.client.api.PublicApi;
+
+
+PublicApi apiInstance = new PublicApi();
+try {
+    apiInstance.taxonomyPublicConceptTypesGet();
+} catch (ApiException e) {
+    System.err.println("Exception when calling PublicApi#taxonomyPublicConceptTypesGet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
+ - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
+
+<a name="taxonomyPublicDeprecatedConceptHistorySinceGet"></a>
+# **taxonomyPublicDeprecatedConceptHistorySinceGet**
+> ERRORUNKNOWN taxonomyPublicDeprecatedConceptHistorySinceGet(dateTime)
 
 Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
 
@@ -70,10 +195,10 @@ Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 
 PublicApi apiInstance = new PublicApi();
 String dateTime = "dateTime_example"; // String | 
 try {
-    ERRORUNKNOWN result = apiInstance.taxonomyPublicApiDeprecatedConceptHistorySinceGet(dateTime);
+    ERRORUNKNOWN result = apiInstance.taxonomyPublicDeprecatedConceptHistorySinceGet(dateTime);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PublicApi#taxonomyPublicApiDeprecatedConceptHistorySinceGet");
+    System.err.println("Exception when calling PublicApi#taxonomyPublicDeprecatedConceptHistorySinceGet");
     e.printStackTrace();
 }
 ```
@@ -97,9 +222,9 @@ No authorization required
  - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
  - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
 
-<a name="taxonomyPublicApiFullHistoryGet"></a>
-# **taxonomyPublicApiFullHistoryGet**
-> List&lt;Response38763&gt; taxonomyPublicApiFullHistoryGet()
+<a name="taxonomyPublicFullHistoryGet"></a>
+# **taxonomyPublicFullHistoryGet**
+> List&lt;Response38928&gt; taxonomyPublicFullHistoryGet()
 
 Show the complete history.
 
@@ -112,10 +237,10 @@ Show the complete history.
 
 PublicApi apiInstance = new PublicApi();
 try {
-    List<Response38763> result = apiInstance.taxonomyPublicApiFullHistoryGet();
+    List<Response38928> result = apiInstance.taxonomyPublicFullHistoryGet();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PublicApi#taxonomyPublicApiFullHistoryGet");
+    System.err.println("Exception when calling PublicApi#taxonomyPublicFullHistoryGet");
     e.printStackTrace();
 }
 ```
@@ -125,7 +250,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;Response38763&gt;**](Response38763.md)
+[**List&lt;Response38928&gt;**](Response38928.md)
 
 ### Authorization
 
@@ -136,9 +261,9 @@ No authorization required
  - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
  - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
 
-<a name="taxonomyPublicApiTermGet"></a>
-# **taxonomyPublicApiTermGet**
-> List&lt;Response38760&gt; taxonomyPublicApiTermGet(term)
+<a name="taxonomyPublicTermGet"></a>
+# **taxonomyPublicTermGet**
+> List&lt;Response38922&gt; taxonomyPublicTermGet(term)
 
 Search for a term across all taxonomies.
 
@@ -152,10 +277,10 @@ Search for a term across all taxonomies.
 PublicApi apiInstance = new PublicApi();
 String term = "term_example"; // String | 
 try {
-    List<Response38760> result = apiInstance.taxonomyPublicApiTermGet(term);
+    List<Response38922> result = apiInstance.taxonomyPublicTermGet(term);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PublicApi#taxonomyPublicApiTermGet");
+    System.err.println("Exception when calling PublicApi#taxonomyPublicTermGet");
     e.printStackTrace();
 }
 ```
@@ -168,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;Response38760&gt;**](Response38760.md)
+[**List&lt;Response38922&gt;**](Response38922.md)
 
 ### Authorization
 
@@ -179,9 +304,9 @@ No authorization required
  - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
  - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
 
-<a name="taxonomyPublicApiTermPartGet"></a>
-# **taxonomyPublicApiTermPartGet**
-> taxonomyPublicApiTermPartGet(term)
+<a name="taxonomyPublicTermPartGet"></a>
+# **taxonomyPublicTermPartGet**
+> List&lt;Response38925&gt; taxonomyPublicTermPartGet(term)
 
 get concepts by part of string
 
@@ -195,9 +320,10 @@ get concepts by part of string
 PublicApi apiInstance = new PublicApi();
 String term = "term_example"; // String | 
 try {
-    apiInstance.taxonomyPublicApiTermPartGet(term);
+    List<Response38925> result = apiInstance.taxonomyPublicTermPartGet(term);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PublicApi#taxonomyPublicApiTermPartGet");
+    System.err.println("Exception when calling PublicApi#taxonomyPublicTermPartGet");
     e.printStackTrace();
 }
 ```
@@ -210,7 +336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;Response38925&gt;**](Response38925.md)
 
 ### Authorization
 

@@ -2,7 +2,7 @@
 
 Jobtech Taxonomy
 - API version: 1.0.0
-  - Build date: 2019-04-05T11:09:31.292+02:00
+  - Build date: 2019-05-07T09:41:34.700+02:00
 
 Jobtech taxonomy services
 
@@ -98,36 +98,44 @@ public class DefaultApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *http://localhost:3000*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**authenticatedGet**](docs/DefaultApi.md#authenticatedGet) | **GET** /authenticated | 
-*PrivateApi* | [**taxonomyPrivateApiConceptAllGet**](docs/PrivateApi.md#taxonomyPrivateApiConceptAllGet) | **GET** /taxonomy/private-api/concept/all | Read all concepts of the given type.
-*PrivateApi* | [**taxonomyPrivateApiConceptDelete**](docs/PrivateApi.md#taxonomyPrivateApiConceptDelete) | **DELETE** /taxonomy/private-api/concept | Retract the concept with the given ID.
-*PrivateApi* | [**taxonomyPrivateApiConceptGet**](docs/PrivateApi.md#taxonomyPrivateApiConceptGet) | **GET** /taxonomy/private-api/concept | Read a concept by ID.
-*PrivateApi* | [**taxonomyPrivateApiConceptPost**](docs/PrivateApi.md#taxonomyPrivateApiConceptPost) | **POST** /taxonomy/private-api/concept | Assert a new concept.
-*PrivateApi* | [**taxonomyPrivateApiConceptTypesGet**](docs/PrivateApi.md#taxonomyPrivateApiConceptTypesGet) | **GET** /taxonomy/private-api/concept/types | Read a list of all taxonomy types.
-*PrivateApi* | [**taxonomyPrivateApiReplaceConceptPost**](docs/PrivateApi.md#taxonomyPrivateApiReplaceConceptPost) | **POST** /taxonomy/private-api/replace-concept | Replace old concept with a new concept.
-*PublicApi* | [**taxonomyPublicApiConceptHistorySinceGet**](docs/PublicApi.md#taxonomyPublicApiConceptHistorySinceGet) | **GET** /taxonomy/public-api/concept-history-since | Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
-*PublicApi* | [**taxonomyPublicApiDeprecatedConceptHistorySinceGet**](docs/PublicApi.md#taxonomyPublicApiDeprecatedConceptHistorySinceGet) | **GET** /taxonomy/public-api/deprecated-concept-history-since | Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
-*PublicApi* | [**taxonomyPublicApiFullHistoryGet**](docs/PublicApi.md#taxonomyPublicApiFullHistoryGet) | **GET** /taxonomy/public-api/full-history | Show the complete history.
-*PublicApi* | [**taxonomyPublicApiTermGet**](docs/PublicApi.md#taxonomyPublicApiTermGet) | **GET** /taxonomy/public-api/term | Search for a term across all taxonomies.
-*PublicApi* | [**taxonomyPublicApiTermPartGet**](docs/PublicApi.md#taxonomyPublicApiTermPartGet) | **GET** /taxonomy/public-api/term-part | get concepts by part of string
+*DefaultApi* | [**relationGraphGet**](docs/DefaultApi.md#relationGraphGet) | **GET** /relation/graph | Relation graphs.
+*DefaultApi* | [**relationTypesGet**](docs/DefaultApi.md#relationTypesGet) | **GET** /relation/types | Relation graphs.
+*PrivateApi* | [**taxonomyPrivateConceptDelete**](docs/PrivateApi.md#taxonomyPrivateConceptDelete) | **DELETE** /taxonomy/private/concept | Retract the concept with the given ID.
+*PrivateApi* | [**taxonomyPrivateConceptPost**](docs/PrivateApi.md#taxonomyPrivateConceptPost) | **POST** /taxonomy/private/concept | Assert a new concept.
+*PrivateApi* | [**taxonomyPrivateReplaceConceptPost**](docs/PrivateApi.md#taxonomyPrivateReplaceConceptPost) | **POST** /taxonomy/private/replace-concept | Replace old concept with a new concept.
+*PublicApi* | [**taxonomyPublicConceptAllGet**](docs/PublicApi.md#taxonomyPublicConceptAllGet) | **GET** /taxonomy/public/concept/all | Read all concepts of the given type.
+*PublicApi* | [**taxonomyPublicConceptGet**](docs/PublicApi.md#taxonomyPublicConceptGet) | **GET** /taxonomy/public/concept | Read a concept by ID.
+*PublicApi* | [**taxonomyPublicConceptHistorySinceGet**](docs/PublicApi.md#taxonomyPublicConceptHistorySinceGet) | **GET** /taxonomy/public/concept-history-since | Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
+*PublicApi* | [**taxonomyPublicConceptTypesGet**](docs/PublicApi.md#taxonomyPublicConceptTypesGet) | **GET** /taxonomy/public/concept/types | Read a list of all taxonomy types.
+*PublicApi* | [**taxonomyPublicDeprecatedConceptHistorySinceGet**](docs/PublicApi.md#taxonomyPublicDeprecatedConceptHistorySinceGet) | **GET** /taxonomy/public/deprecated-concept-history-since | Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
+*PublicApi* | [**taxonomyPublicFullHistoryGet**](docs/PublicApi.md#taxonomyPublicFullHistoryGet) | **GET** /taxonomy/public/full-history | Show the complete history.
+*PublicApi* | [**taxonomyPublicTermGet**](docs/PublicApi.md#taxonomyPublicTermGet) | **GET** /taxonomy/public/term | Search for a term across all taxonomies.
+*PublicApi* | [**taxonomyPublicTermPartGet**](docs/PublicApi.md#taxonomyPublicTermPartGet) | **GET** /taxonomy/public/term-part | get concepts by part of string
 
 
 ## Documentation for Models
 
- - [Response38760](docs/Response38760.md)
- - [Response38761](docs/Response38761.md)
- - [Response38762](docs/Response38762.md)
- - [Response38763](docs/Response38763.md)
- - [Response38764](docs/Response38764.md)
- - [Response38765](docs/Response38765.md)
- - [Response38766](docs/Response38766.md)
- - [Response38767](docs/Response38767.md)
- - [Response38769](docs/Response38769.md)
- - [Response38770](docs/Response38770.md)
+ - [Response38918](docs/Response38918.md)
+ - [Response38919](docs/Response38919.md)
+ - [Response38921](docs/Response38921.md)
+ - [Response38922](docs/Response38922.md)
+ - [Response38923](docs/Response38923.md)
+ - [Response38924](docs/Response38924.md)
+ - [Response38925](docs/Response38925.md)
+ - [Response38926](docs/Response38926.md)
+ - [Response38927](docs/Response38927.md)
+ - [Response38928](docs/Response38928.md)
+ - [Response38929](docs/Response38929.md)
+ - [Response38930](docs/Response38930.md)
+ - [Response38931](docs/Response38931.md)
+ - [Response38932](docs/Response38932.md)
+ - [Response38934](docs/Response38934.md)
+ - [Response38935](docs/Response38935.md)
 
 
 ## Documentation for Authorization

@@ -3,15 +3,15 @@ package se.jobtech.taxonomy.client.invoker.auth;
 import org.springframework.http.HttpHeaders;
 import org.springframework.util.MultiValueMap;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-04-05T11:09:31.292+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-05-07T09:41:34.700+02:00")
 public class ApiKeyAuth implements Authentication {
     private final String location;
     private final String paramName;
 
-    private  String apiKey="45c1f5e3f05d0";
+    private String apiKey;
     private String apiKeyPrefix;
 
-    public ApiKeyAuth(String location, String paramName) {
+    public ApiKeyAuth( String location, String paramName ) {
         this.location = location;
         this.paramName = paramName;
     }
@@ -28,7 +28,7 @@ public class ApiKeyAuth implements Authentication {
         return apiKey;
     }
 
-    public void setApiKey(String apiKey) {
+    public void setApiKey( String apiKey ) {
         this.apiKey = apiKey;
     }
 
@@ -36,12 +36,12 @@ public class ApiKeyAuth implements Authentication {
         return apiKeyPrefix;
     }
 
-    public void setApiKeyPrefix(String apiKeyPrefix) {
+    public void setApiKeyPrefix( String apiKeyPrefix ) {
         this.apiKeyPrefix = apiKeyPrefix;
     }
 
     @Override
-    public void applyToParams(MultiValueMap<String, String> queryParams, HttpHeaders headerParams) {
+    public void applyToParams( MultiValueMap<String, String> queryParams, HttpHeaders headerParams ) {
         if (apiKey == null) {
             return;
         }
@@ -51,10 +51,10 @@ public class ApiKeyAuth implements Authentication {
         } else {
             value = apiKey;
         }
-        if (location.equals("query")) {
-            queryParams.add(paramName, value);
-        } else if (location.equals("header")) {
-            headerParams.add(paramName, value);
-       }
+        if (location.equals( "query" )) {
+            queryParams.add( paramName, value );
+        } else if (location.equals( "header" )) {
+            headerParams.add( paramName, value );
+        }
     }
 }

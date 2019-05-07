@@ -1,62 +1,17 @@
 # PrivateApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *http://localhost:3000*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**taxonomyPrivateApiConceptAllGet**](PrivateApi.md#taxonomyPrivateApiConceptAllGet) | **GET** /taxonomy/private-api/concept/all | Read all concepts of the given type.
-[**taxonomyPrivateApiConceptDelete**](PrivateApi.md#taxonomyPrivateApiConceptDelete) | **DELETE** /taxonomy/private-api/concept | Retract the concept with the given ID.
-[**taxonomyPrivateApiConceptGet**](PrivateApi.md#taxonomyPrivateApiConceptGet) | **GET** /taxonomy/private-api/concept | Read a concept by ID.
-[**taxonomyPrivateApiConceptPost**](PrivateApi.md#taxonomyPrivateApiConceptPost) | **POST** /taxonomy/private-api/concept | Assert a new concept.
-[**taxonomyPrivateApiConceptTypesGet**](PrivateApi.md#taxonomyPrivateApiConceptTypesGet) | **GET** /taxonomy/private-api/concept/types | Read a list of all taxonomy types.
-[**taxonomyPrivateApiReplaceConceptPost**](PrivateApi.md#taxonomyPrivateApiReplaceConceptPost) | **POST** /taxonomy/private-api/replace-concept | Replace old concept with a new concept.
+[**taxonomyPrivateConceptDelete**](PrivateApi.md#taxonomyPrivateConceptDelete) | **DELETE** /taxonomy/private/concept | Retract the concept with the given ID.
+[**taxonomyPrivateConceptPost**](PrivateApi.md#taxonomyPrivateConceptPost) | **POST** /taxonomy/private/concept | Assert a new concept.
+[**taxonomyPrivateReplaceConceptPost**](PrivateApi.md#taxonomyPrivateReplaceConceptPost) | **POST** /taxonomy/private/replace-concept | Replace old concept with a new concept.
 
 
-<a name="taxonomyPrivateApiConceptAllGet"></a>
-# **taxonomyPrivateApiConceptAllGet**
-> taxonomyPrivateApiConceptAllGet(type)
-
-Read all concepts of the given type.
-
-### Example
-```java
-// Import classes:
-//import se.jobtech.taxonomy.client.invoker.ApiException;
-//import se.jobtech.taxonomy.client.api.PrivateApi;
-
-
-PrivateApi apiInstance = new PrivateApi();
-String type = "type_example"; // String | 
-try {
-    apiInstance.taxonomyPrivateApiConceptAllGet(type);
-} catch (ApiException e) {
-    System.err.println("Exception when calling PrivateApi#taxonomyPrivateApiConceptAllGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **type** | **String**|  |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
- - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
-
-<a name="taxonomyPrivateApiConceptDelete"></a>
-# **taxonomyPrivateApiConceptDelete**
-> taxonomyPrivateApiConceptDelete(id)
+<a name="taxonomyPrivateConceptDelete"></a>
+# **taxonomyPrivateConceptDelete**
+> taxonomyPrivateConceptDelete(id)
 
 Retract the concept with the given ID.
 
@@ -70,9 +25,9 @@ Retract the concept with the given ID.
 PrivateApi apiInstance = new PrivateApi();
 String id = "id_example"; // String | 
 try {
-    apiInstance.taxonomyPrivateApiConceptDelete(id);
+    apiInstance.taxonomyPrivateConceptDelete(id);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PrivateApi#taxonomyPrivateApiConceptDelete");
+    System.err.println("Exception when calling PrivateApi#taxonomyPrivateConceptDelete");
     e.printStackTrace();
 }
 ```
@@ -96,51 +51,9 @@ No authorization required
  - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
  - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
 
-<a name="taxonomyPrivateApiConceptGet"></a>
-# **taxonomyPrivateApiConceptGet**
-> taxonomyPrivateApiConceptGet(id)
-
-Read a concept by ID.
-
-### Example
-```java
-// Import classes:
-//import se.jobtech.taxonomy.client.invoker.ApiException;
-//import se.jobtech.taxonomy.client.api.PrivateApi;
-
-
-PrivateApi apiInstance = new PrivateApi();
-String id = "id_example"; // String | 
-try {
-    apiInstance.taxonomyPrivateApiConceptGet(id);
-} catch (ApiException e) {
-    System.err.println("Exception when calling PrivateApi#taxonomyPrivateApiConceptGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
- - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
-
-<a name="taxonomyPrivateApiConceptPost"></a>
-# **taxonomyPrivateApiConceptPost**
-> taxonomyPrivateApiConceptPost(type, description, preferredTerm)
+<a name="taxonomyPrivateConceptPost"></a>
+# **taxonomyPrivateConceptPost**
+> taxonomyPrivateConceptPost(type, description, preferredTerm)
 
 Assert a new concept.
 
@@ -156,9 +69,9 @@ String type = "type_example"; // String |
 String description = "description_example"; // String | 
 String preferredTerm = "preferredTerm_example"; // String | 
 try {
-    apiInstance.taxonomyPrivateApiConceptPost(type, description, preferredTerm);
+    apiInstance.taxonomyPrivateConceptPost(type, description, preferredTerm);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PrivateApi#taxonomyPrivateApiConceptPost");
+    System.err.println("Exception when calling PrivateApi#taxonomyPrivateConceptPost");
     e.printStackTrace();
 }
 ```
@@ -184,47 +97,9 @@ No authorization required
  - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
  - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
 
-<a name="taxonomyPrivateApiConceptTypesGet"></a>
-# **taxonomyPrivateApiConceptTypesGet**
-> taxonomyPrivateApiConceptTypesGet()
-
-Read a list of all taxonomy types.
-
-### Example
-```java
-// Import classes:
-//import se.jobtech.taxonomy.client.invoker.ApiException;
-//import se.jobtech.taxonomy.client.api.PrivateApi;
-
-
-PrivateApi apiInstance = new PrivateApi();
-try {
-    apiInstance.taxonomyPrivateApiConceptTypesGet();
-} catch (ApiException e) {
-    System.err.println("Exception when calling PrivateApi#taxonomyPrivateApiConceptTypesGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
- - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
-
-<a name="taxonomyPrivateApiReplaceConceptPost"></a>
-# **taxonomyPrivateApiReplaceConceptPost**
-> taxonomyPrivateApiReplaceConceptPost(oldConceptId, newConceptId)
+<a name="taxonomyPrivateReplaceConceptPost"></a>
+# **taxonomyPrivateReplaceConceptPost**
+> taxonomyPrivateReplaceConceptPost(oldConceptId, newConceptId)
 
 Replace old concept with a new concept.
 
@@ -239,9 +114,9 @@ PrivateApi apiInstance = new PrivateApi();
 String oldConceptId = "oldConceptId_example"; // String | 
 String newConceptId = "newConceptId_example"; // String | 
 try {
-    apiInstance.taxonomyPrivateApiReplaceConceptPost(oldConceptId, newConceptId);
+    apiInstance.taxonomyPrivateReplaceConceptPost(oldConceptId, newConceptId);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PrivateApi#taxonomyPrivateApiReplaceConceptPost");
+    System.err.println("Exception when calling PrivateApi#taxonomyPrivateReplaceConceptPost");
     e.printStackTrace();
 }
 ```

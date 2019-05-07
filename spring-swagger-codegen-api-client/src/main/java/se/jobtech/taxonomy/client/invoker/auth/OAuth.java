@@ -3,7 +3,7 @@ package se.jobtech.taxonomy.client.invoker.auth;
 import org.springframework.http.HttpHeaders;
 import org.springframework.util.MultiValueMap;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-04-05T11:09:31.292+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-05-07T09:41:34.700+02:00")
 public class OAuth implements Authentication {
     private String accessToken;
 
@@ -11,14 +11,14 @@ public class OAuth implements Authentication {
         return accessToken;
     }
 
-    public void setAccessToken(String accessToken) {
+    public void setAccessToken( String accessToken ) {
         this.accessToken = accessToken;
     }
 
     @Override
-    public void applyToParams(MultiValueMap<String, String> queryParams, HttpHeaders headerParams) {
+    public void applyToParams( MultiValueMap<String, String> queryParams, HttpHeaders headerParams ) {
         if (accessToken != null) {
-            headerParams.add(HttpHeaders.AUTHORIZATION, "Bearer " + accessToken);
+            headerParams.add( HttpHeaders.AUTHORIZATION, "Bearer " + accessToken );
         }
     }
 }
