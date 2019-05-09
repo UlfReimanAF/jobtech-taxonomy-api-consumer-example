@@ -25,7 +25,7 @@ public class DefaultApiTest {
 
 
     /**
-     * @throws ApiException if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void authenticatedGetTest() {
@@ -37,7 +37,7 @@ public class DefaultApiTest {
     /**
      * Relation graphs.
      *
-     * @throws ApiException if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void relationGraphGetTest() {
@@ -50,7 +50,7 @@ public class DefaultApiTest {
     /**
      * Relation graphs.
      *
-     * @throws ApiException if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void relationTypesGetTest() {

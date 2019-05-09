@@ -25,7 +25,7 @@ public class PrivateApiTest {
     /**
      * Retract the concept with the given ID.
      *
-     * @throws ApiException if the Api call fails
+     * @throws Exception if the Api call fails
      */
     //@Test
     public void taxonomyPrivateConceptDeleteTest() {
@@ -38,7 +38,7 @@ public class PrivateApiTest {
     /**
      * Assert a new concept.
      *
-     * @throws ApiException if the Api call fails
+     * @throws Exception if the Api call fails
      */
     // @Test
     public void taxonomyPrivateConceptPostTest() {
@@ -53,7 +53,7 @@ public class PrivateApiTest {
     /**
      * Replace old concept with a new concept.
      *
-     * @throws ApiException if the Api call fails
+     * @throws Exception if the Api call fails
      */
     // @Test
     public void taxonomyPrivateReplaceConceptPostTest() {

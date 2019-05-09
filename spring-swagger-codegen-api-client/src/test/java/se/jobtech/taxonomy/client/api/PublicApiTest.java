@@ -34,7 +34,7 @@ public class PublicApiTest {
     /**
      * Read all concepts of the given type.
      *
-     * @throws ApiException if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void taxonomyPublicConceptAllGetTest() {
@@ -47,7 +47,7 @@ public class PublicApiTest {
     /**
      * Read a concept by ID.
      *
-     * @throws ApiException if the Api call fails
+     * @throws Exception if the Api call fails
      *                      <p>
      *                      <p>
      *                      {
@@ -70,7 +70,7 @@ public class PublicApiTest {
     /**
      * Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
      *
-     * @throws ApiException if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void taxonomyPublicConceptHistorySinceGetTest() {
@@ -83,7 +83,7 @@ public class PublicApiTest {
     /**
      * Read a list of all taxonomy types.
      *
-     * @throws ApiException if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void taxonomyPublicConceptTypesGetTest() {
@@ -95,7 +95,7 @@ public class PublicApiTest {
     /**
      * Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
      *
-     * @throws ApiException if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void taxonomyPublicDeprecatedConceptHistorySinceGetTest() {
@@ -108,7 +108,7 @@ public class PublicApiTest {
     /**
      * Show the complete history.
      *
-     * @throws ApiException if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void taxonomyPublicFullHistoryGetTest() {
@@ -121,7 +121,7 @@ public class PublicApiTest {
     /**
      * Search for a term across all taxonomies.
      *
-     * @throws ApiException if the Api call fails
+     * @throws Exception if the Api call fails
      */
     // @Test
     public void taxonomyPublicTermGetTest() {
@@ -134,7 +134,7 @@ public class PublicApiTest {
     /**
      * get concepts by part of string
      *
-     * @throws ApiException if the Api call fails
+     * @throws Exception if the Api call fails
      */
     @Test
     public void taxonomyPublicTermPartGetTest() {
