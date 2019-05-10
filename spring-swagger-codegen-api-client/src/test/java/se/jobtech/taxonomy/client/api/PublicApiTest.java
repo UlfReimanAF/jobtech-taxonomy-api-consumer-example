@@ -123,10 +123,15 @@ public class PublicApiTest {
      *
      * @throws Exception if the Api call fails
      */
-    // @Test
+   //  @Test
     public void taxonomyPublicTermGetTest() {
         String term = "Danska";
         List<Response38922> response = api.taxonomyPublicTermGet( term );
+        for (Response38922 r: response)
+              {
+                  r.getId();
+
+        }
 
         // TODO: test validations
     }
@@ -144,4 +149,9 @@ public class PublicApiTest {
         // TODO: test validations
     }
 
+    @Test
+    public void taxonomyPublicFullHistoryGet() {
+        List<Response38928> response = api.taxonomyPublicFullHistoryGet( );
+
+    }
 }

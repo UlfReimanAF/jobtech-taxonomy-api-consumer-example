@@ -17,6 +17,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
 import org.threeten.bp.OffsetDateTime;
 
+
 import java.util.Objects;
 
 /**
@@ -43,13 +44,16 @@ public class Response38930 {
     private Long transactionId = null;
 
     @JsonProperty("timestamp")
-    private OffsetDateTime timestamp = null;
+    private String timestamp= null;
 
     @JsonProperty("concept-id")
     private String conceptId = null;
 
     @JsonProperty("event-type")
     private String eventType = null;
+
+    public Response38930() {
+    }
 
     public Response38930 category( String category ) {
         this.category = category;
@@ -165,7 +169,7 @@ public class Response38930 {
         this.transactionId = transactionId;
     }
 
-    public Response38930 timestamp( OffsetDateTime timestamp ) {
+    public Response38930 timestamp( String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
@@ -176,11 +180,11 @@ public class Response38930 {
      * @return timestamp
      **/
     @ApiModelProperty(required = true, value = "")
-    public OffsetDateTime getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp( OffsetDateTime timestamp ) {
+    public void setTimestamp( String timestamp) {
         this.timestamp = timestamp;
     }
 

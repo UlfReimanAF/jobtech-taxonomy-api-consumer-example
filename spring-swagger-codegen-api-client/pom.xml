@@ -1,4 +1,4 @@
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>se.jobtech</groupId>
@@ -115,8 +115,7 @@
                         <configuration>
                             <sources>
                                 <source>
-                                    src/main/java
-                                </source>
+                                    src/main/java</source>
                             </sources>
                         </configuration>
                     </execution>
@@ -129,8 +128,7 @@
                         <configuration>
                             <sources>
                                 <source>
-                                    src/test/java
-                                </source>
+                                    src/test/java</source>
                             </sources>
                         </configuration>
                     </execution>
@@ -142,8 +140,7 @@
                 <version>3.6.1</version>
                 <configuration>
                     <source>
-                        1.7
-                    </source>
+                        1.7</source>
                     <target>1.7</target>
                 </configuration>
             </plugin>
@@ -181,20 +178,20 @@
             <id>sign-artifacts</id>
             <build>
                 <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.5</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
+                    <!-- <plugin>
+                         <groupId>org.apache.maven.plugins</groupId>
+                         <artifactId>maven-gpg-plugin</artifactId>
+                         <version>1.6</version>
+                         <executions>
+                             <execution>
+                                 <id>sign-artifacts</id>
+                                 <phase>verify</phase>
+                                 <goals>
+                                     <goal>sign</goal>
+                                 </goals>
+                             </execution>
+                         </executions>
+                     </plugin>-->
                 </plugins>
             </build>
         </profile>
@@ -205,6 +202,29 @@
             <groupId>io.swagger</groupId>
             <artifactId>swagger-annotations</artifactId>
             <version>${swagger-annotations-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.1.4.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>2.1.4.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.2</version>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.199</version>
+            <scope>runtime</scope>
         </dependency>
 
         <!-- HTTP client: Spring RestTemplate -->
@@ -228,7 +248,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>${jackson-version}</version>
+            <version>${jackson-databind-version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.jaxrs</groupId>
@@ -248,14 +268,16 @@
             <version>${junit-version}</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <swagger-annotations-version>1.5.17</swagger-annotations-version>
         <spring-web-version>4.3.9.RELEASE</spring-web-version>
         <jackson-version>2.8.11</jackson-version>
-        <jackson-version-bind>2.8.11</jackson-version-bind>
         <jackson-threetenbp-version>2.6.4</jackson-threetenbp-version>
+        <jackson-databind-version>2.8.11.3</jackson-databind-version>
+
         <maven-plugin-version>1.0.0</maven-plugin-version>
         <junit-version>4.12</junit-version>
     </properties>
