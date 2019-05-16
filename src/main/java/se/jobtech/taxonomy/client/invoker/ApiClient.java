@@ -39,7 +39,9 @@ import java.util.Map.Entry;
 public class ApiClient {
     private boolean debugging = false;
     private HttpHeaders defaultHeaders = new HttpHeaders( );
-    private String basePath = "http://localhost:3000";
+    private String basePath = "http://jobtech-taxonomy-api-develop.dev.services.jtech.se";
+
+//    private String basePath = "http://localhost:3000";
     private RestTemplate restTemplate;
     private Map<String, Authentication> authentications;
     private HttpStatus statusCode;
