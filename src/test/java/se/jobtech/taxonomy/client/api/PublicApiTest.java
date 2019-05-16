@@ -19,8 +19,8 @@ import se.jobtech.taxonomy.client.model.Response38922;
 import se.jobtech.taxonomy.client.model.Response38925;
 import se.jobtech.taxonomy.client.model.Response38928;
 import se.jobtech.taxonomy.client.model.Response38930;
-
 import java.util.List;
+import static org.junit.Assert.assertNotEquals;
 
 /**
  * API tests for PublicApi
@@ -40,6 +40,8 @@ public class PublicApiTest {
     public void taxonomyPublicConceptAllGetTest() {
         String type = "driving-license";
         api.taxonomyPublicConceptAllGet( type );
+
+
 
         // TODO: test validations
     }
@@ -62,7 +64,7 @@ public class PublicApiTest {
     @Test
     public void taxonomyPublicConceptGetTest() {
         String id = "hK1a_wsQ_4UG";
-        api.taxonomyPublicConceptGet( id );
+         api.taxonomyPublicConceptGet( id );
 
         // TODO: test validations
     }
@@ -76,6 +78,7 @@ public class PublicApiTest {
     public void taxonomyPublicConceptHistorySinceGetTest() {
         String dateTime = "2018-08-08 14:00:00";
         List<Response38930> response = api.taxonomyPublicConceptHistorySinceGet( dateTime );
+        assertNotEquals( response,null );
 
         // TODO: test validations
     }
@@ -89,7 +92,7 @@ public class PublicApiTest {
     public void taxonomyPublicConceptTypesGetTest() {
         api.taxonomyPublicConceptTypesGet( );
 
-        System.out.println( "TESTING" );
+
     }
 
     /**
@@ -101,6 +104,7 @@ public class PublicApiTest {
     public void taxonomyPublicDeprecatedConceptHistorySinceGetTest() {
         String dateTime = "2018-08-08 14:00:00";
         String response = api.taxonomyPublicDeprecatedConceptHistorySinceGet( dateTime );
+        assertNotEquals(response,null  );
 
         // TODO: test validations
     }
@@ -113,9 +117,8 @@ public class PublicApiTest {
     @Test
     public void taxonomyPublicFullHistoryGetTest() {
         List<Response38928> response = api.taxonomyPublicFullHistoryGet( );
+      assertNotEquals( response,null );
 
-
-        // TODO: test validations
     }
 
     /**

@@ -39,7 +39,7 @@ public class DefaultApiTest {
      *
      * @throws Exception if the Api call fails
      */
-    @Test
+   // @Test
     public void relationGraphGetTest() {
         String relationType = "Jobtech";
         String response = api.relationGraphGet( relationType );
