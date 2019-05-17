@@ -13,12 +13,14 @@
 
 package se.jobtech.taxonomy.client.api;
 
+import org.junit.Ignore;
 import org.junit.Test;
+import se.jobtech.taxonomy.client.model.ERRORUNKNOWN;
 
 /**
  * API tests for DefaultApi
  */
-
+@Ignore
 public class DefaultApiTest {
 
     private final DefaultApi api = new DefaultApi( );
@@ -39,10 +41,24 @@ public class DefaultApiTest {
      *
      * @throws Exception if the Api call fails
      */
-   // @Test
-    public void relationGraphGetTest() {
-        String relationType = "Jobtech";
-        String response = api.relationGraphGet( relationType );
+    @Test
+    public void relationGraphRelationTypeGetTest() {
+        String relationType = null;
+        ERRORUNKNOWN response = api.relationGraphRelationTypeGet( relationType );
+
+        // TODO: test validations
+    }
+
+    /**
+     * Relation graphs.
+     *
+     * @throws Exception if the Api call fails
+     */
+    @Test
+    public void relationGraphRelationTypeIdGetTest() {
+        String relationType = null;
+        String id = null;
+        ERRORUNKNOWN response = api.relationGraphRelationTypeIdGet( relationType, id );
 
         // TODO: test validations
     }
@@ -54,7 +70,7 @@ public class DefaultApiTest {
      */
     @Test
     public void relationTypesGetTest() {
-        String response = api.relationTypesGet( );
+        ERRORUNKNOWN response = api.relationTypesGet( );
 
         // TODO: test validations
     }

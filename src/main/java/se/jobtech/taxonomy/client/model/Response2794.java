@@ -19,10 +19,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /**
- * Response38930
+ * Response2794
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-05-07T09:41:34.700+02:00")
-public class Response38930 {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-05-17T13:28:16.089+02:00")
+public class Response2794 {
     @JsonProperty("category")
     private String category = null;
 
@@ -50,10 +50,7 @@ public class Response38930 {
     @JsonProperty("event-type")
     private String eventType = null;
 
-    public Response38930() {
-    }
-
-    public Response38930 category( String category ) {
+    public Response2794 category( String category ) {
         this.category = category;
         return this;
     }
@@ -72,7 +69,7 @@ public class Response38930 {
         this.category = category;
     }
 
-    public Response38930 preferredTerm( String preferredTerm ) {
+    public Response2794 preferredTerm( String preferredTerm ) {
         this.preferredTerm = preferredTerm;
         return this;
     }
@@ -91,7 +88,7 @@ public class Response38930 {
         this.preferredTerm = preferredTerm;
     }
 
-    public Response38930 newPreferredTerm( String newPreferredTerm ) {
+    public Response2794 newPreferredTerm( String newPreferredTerm ) {
         this.newPreferredTerm = newPreferredTerm;
         return this;
     }
@@ -110,7 +107,7 @@ public class Response38930 {
         this.newPreferredTerm = newPreferredTerm;
     }
 
-    public Response38930 oldPreferredTerm( String oldPreferredTerm ) {
+    public Response2794 oldPreferredTerm( String oldPreferredTerm ) {
         this.oldPreferredTerm = oldPreferredTerm;
         return this;
     }
@@ -129,7 +126,7 @@ public class Response38930 {
         this.oldPreferredTerm = oldPreferredTerm;
     }
 
-    public Response38930 deprecated( Boolean deprecated ) {
+    public Response2794 deprecated( Boolean deprecated ) {
         this.deprecated = deprecated;
         return this;
     }
@@ -148,7 +145,7 @@ public class Response38930 {
         this.deprecated = deprecated;
     }
 
-    public Response38930 transactionId( Long transactionId ) {
+    public Response2794 transactionId( Long transactionId ) {
         this.transactionId = transactionId;
         return this;
     }
@@ -167,7 +164,7 @@ public class Response38930 {
         this.transactionId = transactionId;
     }
 
-    public Response38930 timestamp( String timestamp ) {
+    public Response2794 timestamp( String timestamp ) {
         this.timestamp = timestamp;
         return this;
     }
@@ -186,7 +183,7 @@ public class Response38930 {
         this.timestamp = timestamp;
     }
 
-    public Response38930 conceptId( String conceptId ) {
+    public Response2794 conceptId( String conceptId ) {
         this.conceptId = conceptId;
         return this;
     }
@@ -205,7 +202,7 @@ public class Response38930 {
         this.conceptId = conceptId;
     }
 
-    public Response38930 eventType( String eventType ) {
+    public Response2794 eventType( String eventType ) {
         this.eventType = eventType;
         return this;
     }
@@ -233,16 +230,16 @@ public class Response38930 {
         if (o == null || getClass( ) != o.getClass( )) {
             return false;
         }
-        Response38930 response38930 = (Response38930) o;
-        return Objects.equals( this.category, response38930.category ) &&
-                Objects.equals( this.preferredTerm, response38930.preferredTerm ) &&
-                Objects.equals( this.newPreferredTerm, response38930.newPreferredTerm ) &&
-                Objects.equals( this.oldPreferredTerm, response38930.oldPreferredTerm ) &&
-                Objects.equals( this.deprecated, response38930.deprecated ) &&
-                Objects.equals( this.transactionId, response38930.transactionId ) &&
-                Objects.equals( this.timestamp, response38930.timestamp ) &&
-                Objects.equals( this.conceptId, response38930.conceptId ) &&
-                Objects.equals( this.eventType, response38930.eventType );
+        Response2794 response2794 = (Response2794) o;
+        return Objects.equals( this.category, response2794.category ) &&
+                Objects.equals( this.preferredTerm, response2794.preferredTerm ) &&
+                Objects.equals( this.newPreferredTerm, response2794.newPreferredTerm ) &&
+                Objects.equals( this.oldPreferredTerm, response2794.oldPreferredTerm ) &&
+                Objects.equals( this.deprecated, response2794.deprecated ) &&
+                Objects.equals( this.transactionId, response2794.transactionId ) &&
+                Objects.equals( this.timestamp, response2794.timestamp ) &&
+                Objects.equals( this.conceptId, response2794.conceptId ) &&
+                Objects.equals( this.eventType, response2794.eventType );
     }
 
     @Override
@@ -254,7 +251,7 @@ public class Response38930 {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder( );
-        sb.append( "class Response38930 {\n" );
+        sb.append( "class Response2794 {\n" );
 
         sb.append( "    category: " ).append( toIndentedString( category ) ).append( "\n" );
         sb.append( "    preferredTerm: " ).append( toIndentedString( preferredTerm ) ).append( "\n" );

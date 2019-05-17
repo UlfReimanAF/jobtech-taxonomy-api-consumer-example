@@ -21,7 +21,9 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
-import org.threeten.bp.*;
+import org.threeten.bp.Instant;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.ZonedDateTime;
 import se.jobtech.taxonomy.client.invoker.auth.ApiKeyAuth;
 import se.jobtech.taxonomy.client.invoker.auth.Authentication;
 import se.jobtech.taxonomy.client.invoker.auth.HttpBasicAuth;
@@ -34,15 +36,15 @@ import java.text.ParseException;
 import java.util.*;
 import java.util.Map.Entry;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-05-07T09:41:34.700+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-05-17T13:28:16.089+02:00")
 @Component("se.jobtech.taxonomy.client.invoker.ApiClient")
 public class ApiClient {
     private boolean debugging = false;
     private HttpHeaders defaultHeaders = new HttpHeaders( );
     private String basePath = "http://jobtech-taxonomy-api-develop.dev.services.jtech.se";
-
-//    private String basePath = "http://localhost:3000";
     private RestTemplate restTemplate;
+
+    //    private String basePath = "http://localhost:3000";
     private Map<String, Authentication> authentications;
     private HttpStatus statusCode;
     private MultiValueMap<String, String> responseHeaders;
@@ -503,7 +505,6 @@ public class ApiClient {
         if (contentType != null) {
             requestBuilder.contentType( contentType );
         }
-        headerParams.add( "api-key", "2f904e245c1f5" );
 
         addHeadersToRequest( headerParams, requestBuilder );
         addHeadersToRequest( defaultHeaders, requestBuilder );

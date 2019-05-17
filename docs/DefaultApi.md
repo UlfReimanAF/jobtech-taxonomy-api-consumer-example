@@ -1,11 +1,12 @@
 # DefaultApi
 
-All URIs are relative to *http://localhost:3000*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**authenticatedGet**](DefaultApi.md#authenticatedGet) | **GET** /authenticated | 
-[**relationGraphGet**](DefaultApi.md#relationGraphGet) | **GET** /relation/graph | Relation graphs.
+[**relationGraphRelationTypeGet**](DefaultApi.md#relationGraphRelationTypeGet) | **GET** /relation/graph/{relation-type} | Relation graphs.
+[**relationGraphRelationTypeIdGet**](DefaultApi.md#relationGraphRelationTypeIdGet) | **GET** /relation/graph/{relation-type}/{id} | Relation graphs.
 [**relationTypesGet**](DefaultApi.md#relationTypesGet) | **GET** /relation/types | Relation graphs.
 
 
@@ -47,9 +48,9 @@ No authorization required
  - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
  - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
 
-<a name="relationGraphGet"></a>
-# **relationGraphGet**
-> ERRORUNKNOWN relationGraphGet(relationType)
+<a name="relationGraphRelationTypeGet"></a>
+# **relationGraphRelationTypeGet**
+> ERRORUNKNOWN relationGraphRelationTypeGet(relationType)
 
 Relation graphs.
 
@@ -63,10 +64,10 @@ Relation graphs.
 DefaultApi apiInstance = new DefaultApi();
 String relationType = "relationType_example"; // String | 
 try {
-    ERRORUNKNOWN result = apiInstance.relationGraphGet(relationType);
+    ERRORUNKNOWN result = apiInstance.relationGraphRelationTypeGet(relationType);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#relationGraphGet");
+    System.err.println("Exception when calling DefaultApi#relationGraphRelationTypeGet");
     e.printStackTrace();
 }
 ```
@@ -76,6 +77,51 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **relationType** | **String**|  |
+
+### Return type
+
+[**ERRORUNKNOWN**](ERRORUNKNOWN.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
+ - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
+
+<a name="relationGraphRelationTypeIdGet"></a>
+# **relationGraphRelationTypeIdGet**
+> ERRORUNKNOWN relationGraphRelationTypeIdGet(relationType, id)
+
+Relation graphs.
+
+### Example
+```java
+// Import classes:
+//import se.jobtech.taxonomy.client.invoker.ApiException;
+//import se.jobtech.taxonomy.client.api.DefaultApi;
+
+
+DefaultApi apiInstance = new DefaultApi();
+String relationType = "relationType_example"; // String | 
+String id = "id_example"; // String | 
+try {
+    ERRORUNKNOWN result = apiInstance.relationGraphRelationTypeIdGet(relationType, id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DefaultApi#relationGraphRelationTypeIdGet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **relationType** | **String**|  |
+ **id** | **String**|  |
 
 ### Return type
 

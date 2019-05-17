@@ -13,19 +13,18 @@
 
 package se.jobtech.taxonomy.client.api;
 
-
+import org.junit.Ignore;
 import org.junit.Test;
-import se.jobtech.taxonomy.client.model.Response38922;
-import se.jobtech.taxonomy.client.model.Response38925;
-import se.jobtech.taxonomy.client.model.Response38928;
-import se.jobtech.taxonomy.client.model.Response38930;
+import se.jobtech.taxonomy.client.model.*;
+
 import java.util.List;
-import static org.junit.Assert.assertNotEquals;
+
+import static junit.framework.TestCase.assertNotNull;
 
 /**
  * API tests for PublicApi
  */
-
+@Ignore
 public class PublicApiTest {
 
     private final PublicApi api = new PublicApi( );
@@ -42,31 +41,19 @@ public class PublicApiTest {
         api.taxonomyPublicConceptAllGet( type );
 
 
-
-        // TODO: test validations
     }
 
     /**
      * Read a concept by ID.
      *
      * @throws Exception if the Api call fails
-     *                      <p>
-     *                      <p>
-     *                      {
-     *                      "category": "driving-license",
-     *                      "transaction-id": 13194139533317,
-     *                      "preferred-term": "D",
-     *                      "timestamp": "2019-05-03T15:56:10Z",
-     *                      "concept-id": "hK1a_wsQ_4UG",
-     *                      "event-type": "CREATED"
-     *                      }
      */
     @Test
     public void taxonomyPublicConceptGetTest() {
         String id = "hK1a_wsQ_4UG";
-         api.taxonomyPublicConceptGet( id );
+        api.taxonomyPublicConceptGet( id );
 
-        // TODO: test validations
+
     }
 
     /**
@@ -77,10 +64,9 @@ public class PublicApiTest {
     @Test
     public void taxonomyPublicConceptHistorySinceGetTest() {
         String dateTime = "2018-08-08 14:00:00";
-        List<Response38930> response = api.taxonomyPublicConceptHistorySinceGet( dateTime );
-        assertNotEquals( response,null );
+        List<Response2794> response = api.taxonomyPublicConceptHistorySinceGet( dateTime );
+        assertNotNull( response );
 
-        // TODO: test validations
     }
 
     /**
@@ -100,13 +86,12 @@ public class PublicApiTest {
      *
      * @throws Exception if the Api call fails
      */
-    @Test
+    //  @Test
     public void taxonomyPublicDeprecatedConceptHistorySinceGetTest() {
-        String dateTime = "2018-08-08 14:00:00";
-        String response = api.taxonomyPublicDeprecatedConceptHistorySinceGet( dateTime );
-        assertNotEquals(response,null  );
+        String dateTime = null;
+        ERRORUNKNOWN response = api.taxonomyPublicDeprecatedConceptHistorySinceGet( dateTime );
 
-        // TODO: test validations
+
     }
 
     /**
@@ -116,8 +101,8 @@ public class PublicApiTest {
      */
     @Test
     public void taxonomyPublicFullHistoryGetTest() {
-        List<Response38928> response = api.taxonomyPublicFullHistoryGet( );
-      assertNotEquals( response,null );
+        List<Response2792> response = api.taxonomyPublicFullHistoryGet( );
+        assertNotNull( response );
 
     }
 
@@ -126,17 +111,13 @@ public class PublicApiTest {
      *
      * @throws Exception if the Api call fails
      */
-   //  @Test
+    @Test
     public void taxonomyPublicTermGetTest() {
-        String term = "Danska";
-        List<Response38922> response = api.taxonomyPublicTermGet( term );
-        for (Response38922 r: response)
-              {
-                  r.getId();
+        String term = null;
+        List<Response2786> response = api.taxonomyPublicTermGet( term );
+        assertNotNull( response );
 
-        }
 
-        // TODO: test validations
     }
 
     /**
@@ -147,14 +128,10 @@ public class PublicApiTest {
     @Test
     public void taxonomyPublicTermPartGetTest() {
         String term = "Danska";
-        List<Response38925> response = api.taxonomyPublicTermPartGet( term );
+        List<Response2789> response = api.taxonomyPublicTermPartGet( term );
+        assertNotNull( response );
 
-        // TODO: test validations
-    }
-
-    @Test
-    public void taxonomyPublicFullHistoryGet() {
-        List<Response38928> response = api.taxonomyPublicFullHistoryGet( );
 
     }
+
 }

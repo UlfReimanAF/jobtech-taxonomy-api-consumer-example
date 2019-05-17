@@ -15,8 +15,6 @@ package se.jobtech.taxonomy.client.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
-
 
 import java.util.Objects;
 
@@ -52,12 +50,12 @@ public class Response38928 {
     @JsonProperty("event-type")
     private String eventType = null;
 
+    public Response38928() {
+    }
+
     public Response38928 category( String category ) {
         this.category = category;
         return this;
-    }
-
-    public Response38928() {
     }
 
     /**

@@ -1,6 +1,6 @@
 # PrivateApi
 
-All URIs are relative to *http://localhost:3000*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

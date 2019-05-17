@@ -1,6 +1,6 @@
 # PublicApi
 
-All URIs are relative to *http://localhost:3000*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -100,7 +100,7 @@ No authorization required
 
 <a name="taxonomyPublicConceptHistorySinceGet"></a>
 # **taxonomyPublicConceptHistorySinceGet**
-> List&lt;Response38930&gt; taxonomyPublicConceptHistorySinceGet(dateTime)
+> List&lt;Response2794&gt; taxonomyPublicConceptHistorySinceGet(dateTime)
 
 Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
 
@@ -114,7 +114,7 @@ Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 
 PublicApi apiInstance = new PublicApi();
 String dateTime = "dateTime_example"; // String | 
 try {
-    List<Response38930> result = apiInstance.taxonomyPublicConceptHistorySinceGet(dateTime);
+    List<Response2794> result = apiInstance.taxonomyPublicConceptHistorySinceGet(dateTime);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PublicApi#taxonomyPublicConceptHistorySinceGet");
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;Response38930&gt;**](Response38930.md)
+[**List&lt;Response2794&gt;**](Response2794.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ No authorization required
 
 <a name="taxonomyPublicFullHistoryGet"></a>
 # **taxonomyPublicFullHistoryGet**
-> List&lt;Response38928&gt; taxonomyPublicFullHistoryGet()
+> List&lt;Response2792&gt; taxonomyPublicFullHistoryGet()
 
 Show the complete history.
 
@@ -237,7 +237,7 @@ Show the complete history.
 
 PublicApi apiInstance = new PublicApi();
 try {
-    List<Response38928> result = apiInstance.taxonomyPublicFullHistoryGet();
+    List<Response2792> result = apiInstance.taxonomyPublicFullHistoryGet();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PublicApi#taxonomyPublicFullHistoryGet");
@@ -250,7 +250,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;Response38928&gt;**](Response38928.md)
+[**List&lt;Response2792&gt;**](Response2792.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ No authorization required
 
 <a name="taxonomyPublicTermGet"></a>
 # **taxonomyPublicTermGet**
-> List&lt;Response38922&gt; taxonomyPublicTermGet(term)
+> List&lt;Response2786&gt; taxonomyPublicTermGet(term)
 
 Search for a term across all taxonomies.
 
@@ -277,7 +277,7 @@ Search for a term across all taxonomies.
 PublicApi apiInstance = new PublicApi();
 String term = "term_example"; // String | 
 try {
-    List<Response38922> result = apiInstance.taxonomyPublicTermGet(term);
+    List<Response2786> result = apiInstance.taxonomyPublicTermGet(term);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PublicApi#taxonomyPublicTermGet");
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;Response38922&gt;**](Response38922.md)
+[**List&lt;Response2786&gt;**](Response2786.md)
 
 ### Authorization
 
@@ -306,7 +306,7 @@ No authorization required
 
 <a name="taxonomyPublicTermPartGet"></a>
 # **taxonomyPublicTermPartGet**
-> List&lt;Response38925&gt; taxonomyPublicTermPartGet(term)
+> List&lt;Response2789&gt; taxonomyPublicTermPartGet(term)
 
 get concepts by part of string
 
@@ -320,7 +320,7 @@ get concepts by part of string
 PublicApi apiInstance = new PublicApi();
 String term = "term_example"; // String | 
 try {
-    List<Response38925> result = apiInstance.taxonomyPublicTermPartGet(term);
+    List<Response2789> result = apiInstance.taxonomyPublicTermPartGet(term);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PublicApi#taxonomyPublicTermPartGet");
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;Response38925&gt;**](Response38925.md)
+[**List&lt;Response2789&gt;**](Response2789.md)
 
 ### Authorization
 

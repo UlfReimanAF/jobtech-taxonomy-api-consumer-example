@@ -16,7 +16,7 @@ import se.jobtech.taxonomy.client.invoker.ApiClient;
 
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-05-07T09:41:34.700+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-05-17T13:28:16.089+02:00")
 @Component("se.jobtech.taxonomy.client.api.PrivateApi")
 public class PrivateApi {
     private ApiClient apiClient;

@@ -2,10 +2,9 @@
 
 Jobtech Taxonomy
 - API version: 1.0.0
-  - Build date: 2019-05-07T09:41:34.700+02:00
+  - Build date: 2019-05-17T13:28:16.089+02:00
 
 Jobtech taxonomy services
-
 
 
 ## Requirements
@@ -96,12 +95,13 @@ public class DefaultApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost:3000*
+All URIs are relative to *https://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**authenticatedGet**](docs/DefaultApi.md#authenticatedGet) | **GET** /authenticated | 
-*DefaultApi* | [**relationGraphGet**](docs/DefaultApi.md#relationGraphGet) | **GET** /relation/graph | Relation graphs.
+*DefaultApi* | [**relationGraphRelationTypeGet**](docs/DefaultApi.md#relationGraphRelationTypeGet) | **GET** /relation/graph/{relation-type} | Relation graphs.
+*DefaultApi* | [**relationGraphRelationTypeIdGet**](docs/DefaultApi.md#relationGraphRelationTypeIdGet) | **GET** /relation/graph/{relation-type}/{id} | Relation graphs.
 *DefaultApi* | [**relationTypesGet**](docs/DefaultApi.md#relationTypesGet) | **GET** /relation/types | Relation graphs.
 *PrivateApi* | [**taxonomyPrivateConceptDelete**](docs/PrivateApi.md#taxonomyPrivateConceptDelete) | **DELETE** /taxonomy/private/concept | Retract the concept with the given ID.
 *PrivateApi* | [**taxonomyPrivateConceptPost**](docs/PrivateApi.md#taxonomyPrivateConceptPost) | **POST** /taxonomy/private/concept | Assert a new concept.
@@ -118,22 +118,24 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [Response38918](docs/Response38918.md)
- - [Response38919](docs/Response38919.md)
- - [Response38921](docs/Response38921.md)
- - [Response38922](docs/Response38922.md)
- - [Response38923](docs/Response38923.md)
- - [Response38924](docs/Response38924.md)
- - [Response38925](docs/Response38925.md)
- - [Response38926](docs/Response38926.md)
- - [Response38927](docs/Response38927.md)
- - [Response38928](docs/Response38928.md)
- - [Response38929](docs/Response38929.md)
- - [Response38930](docs/Response38930.md)
- - [Response38931](docs/Response38931.md)
- - [Response38932](docs/Response38932.md)
- - [Response38934](docs/Response38934.md)
- - [Response38935](docs/Response38935.md)
+ - [Response2779](docs/Response2779.md)
+ - [Response2780](docs/Response2780.md)
+ - [Response2782](docs/Response2782.md)
+ - [Response2783](docs/Response2783.md)
+ - [Response2785](docs/Response2785.md)
+ - [Response2786](docs/Response2786.md)
+ - [Response2787](docs/Response2787.md)
+ - [Response2788](docs/Response2788.md)
+ - [Response2789](docs/Response2789.md)
+ - [Response2790](docs/Response2790.md)
+ - [Response2791](docs/Response2791.md)
+ - [Response2792](docs/Response2792.md)
+ - [Response2793](docs/Response2793.md)
+ - [Response2794](docs/Response2794.md)
+ - [Response2795](docs/Response2795.md)
+ - [Response2796](docs/Response2796.md)
+ - [Response2798](docs/Response2798.md)
+ - [Response2799](docs/Response2799.md)
 
 
 ## Documentation for Authorization
