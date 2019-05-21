@@ -16,7 +16,7 @@ import se.jobtech.taxonomy.client.invoker.ApiClient;
 
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-05-17T13:28:16.089+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-05-21T08:53:05.447+02:00")
 @Component("se.jobtech.taxonomy.client.api.PrivateApi")
 public class PrivateApi {
     private ApiClient apiClient;
@@ -46,15 +46,15 @@ public class PrivateApi {
      * @param id
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public void taxonomyPrivateConceptDelete( String id ) throws RestClientException {
+    public void v0TaxonomyPrivateConceptDelete( String id ) throws RestClientException {
         Object postBody = null;
 
         // verify the required parameter 'id' is set
         if (id == null) {
-            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'id' when calling taxonomyPrivateConceptDelete" );
+            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'id' when calling v0TaxonomyPrivateConceptDelete" );
         }
 
-        String path = UriComponentsBuilder.fromPath( "/taxonomy/private/concept" ).build( ).toUriString( );
+        String path = UriComponentsBuilder.fromPath( "/v0/taxonomy/private/concept" ).build( ).toUriString( );
 
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>( );
         final HttpHeaders headerParams = new HttpHeaders( );
@@ -88,25 +88,25 @@ public class PrivateApi {
      * @param preferredTerm
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public void taxonomyPrivateConceptPost( String type, String description, String preferredTerm ) throws RestClientException {
+    public void v0TaxonomyPrivateConceptPost( String type, String description, String preferredTerm ) throws RestClientException {
         Object postBody = null;
 
         // verify the required parameter 'type' is set
         if (type == null) {
-            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'type' when calling taxonomyPrivateConceptPost" );
+            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'type' when calling v0TaxonomyPrivateConceptPost" );
         }
 
         // verify the required parameter 'description' is set
         if (description == null) {
-            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'description' when calling taxonomyPrivateConceptPost" );
+            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'description' when calling v0TaxonomyPrivateConceptPost" );
         }
 
         // verify the required parameter 'preferredTerm' is set
         if (preferredTerm == null) {
-            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'preferredTerm' when calling taxonomyPrivateConceptPost" );
+            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'preferredTerm' when calling v0TaxonomyPrivateConceptPost" );
         }
 
-        String path = UriComponentsBuilder.fromPath( "/taxonomy/private/concept" ).build( ).toUriString( );
+        String path = UriComponentsBuilder.fromPath( "/v0/taxonomy/private/concept" ).build( ).toUriString( );
 
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>( );
         final HttpHeaders headerParams = new HttpHeaders( );
@@ -141,20 +141,20 @@ public class PrivateApi {
      * @param newConceptId
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public void taxonomyPrivateReplaceConceptPost( String oldConceptId, String newConceptId ) throws RestClientException {
+    public void v0TaxonomyPrivateReplaceConceptPost( String oldConceptId, String newConceptId ) throws RestClientException {
         Object postBody = null;
 
         // verify the required parameter 'oldConceptId' is set
         if (oldConceptId == null) {
-            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'oldConceptId' when calling taxonomyPrivateReplaceConceptPost" );
+            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'oldConceptId' when calling v0TaxonomyPrivateReplaceConceptPost" );
         }
 
         // verify the required parameter 'newConceptId' is set
         if (newConceptId == null) {
-            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'newConceptId' when calling taxonomyPrivateReplaceConceptPost" );
+            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'newConceptId' when calling v0TaxonomyPrivateReplaceConceptPost" );
         }
 
-        String path = UriComponentsBuilder.fromPath( "/taxonomy/private/replace-concept" ).build( ).toUriString( );
+        String path = UriComponentsBuilder.fromPath( "/v0/taxonomy/private/replace-concept" ).build( ).toUriString( );
 
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>( );
         final HttpHeaders headerParams = new HttpHeaders( );

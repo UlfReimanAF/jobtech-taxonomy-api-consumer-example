@@ -4,14 +4,14 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**taxonomyPrivateConceptDelete**](PrivateApi.md#taxonomyPrivateConceptDelete) | **DELETE** /taxonomy/private/concept | Retract the concept with the given ID.
-[**taxonomyPrivateConceptPost**](PrivateApi.md#taxonomyPrivateConceptPost) | **POST** /taxonomy/private/concept | Assert a new concept.
-[**taxonomyPrivateReplaceConceptPost**](PrivateApi.md#taxonomyPrivateReplaceConceptPost) | **POST** /taxonomy/private/replace-concept | Replace old concept with a new concept.
+[**v0TaxonomyPrivateConceptDelete**](PrivateApi.md#v0TaxonomyPrivateConceptDelete) | **DELETE** /v0/taxonomy/private/concept | Retract the concept with the given ID.
+[**v0TaxonomyPrivateConceptPost**](PrivateApi.md#v0TaxonomyPrivateConceptPost) | **POST** /v0/taxonomy/private/concept | Assert a new concept.
+[**v0TaxonomyPrivateReplaceConceptPost**](PrivateApi.md#v0TaxonomyPrivateReplaceConceptPost) | **POST** /v0/taxonomy/private/replace-concept | Replace old concept with a new concept.
 
 
-<a name="taxonomyPrivateConceptDelete"></a>
-# **taxonomyPrivateConceptDelete**
-> taxonomyPrivateConceptDelete(id)
+<a name="v0TaxonomyPrivateConceptDelete"></a>
+# **v0TaxonomyPrivateConceptDelete**
+> v0TaxonomyPrivateConceptDelete(id)
 
 Retract the concept with the given ID.
 
@@ -25,9 +25,9 @@ Retract the concept with the given ID.
 PrivateApi apiInstance = new PrivateApi();
 String id = "id_example"; // String | 
 try {
-    apiInstance.taxonomyPrivateConceptDelete(id);
+    apiInstance.v0TaxonomyPrivateConceptDelete(id);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PrivateApi#taxonomyPrivateConceptDelete");
+    System.err.println("Exception when calling PrivateApi#v0TaxonomyPrivateConceptDelete");
     e.printStackTrace();
 }
 ```
@@ -51,9 +51,9 @@ No authorization required
  - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
  - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
 
-<a name="taxonomyPrivateConceptPost"></a>
-# **taxonomyPrivateConceptPost**
-> taxonomyPrivateConceptPost(type, description, preferredTerm)
+<a name="v0TaxonomyPrivateConceptPost"></a>
+# **v0TaxonomyPrivateConceptPost**
+> v0TaxonomyPrivateConceptPost(type, description, preferredTerm)
 
 Assert a new concept.
 
@@ -69,9 +69,9 @@ String type = "type_example"; // String |
 String description = "description_example"; // String | 
 String preferredTerm = "preferredTerm_example"; // String | 
 try {
-    apiInstance.taxonomyPrivateConceptPost(type, description, preferredTerm);
+    apiInstance.v0TaxonomyPrivateConceptPost(type, description, preferredTerm);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PrivateApi#taxonomyPrivateConceptPost");
+    System.err.println("Exception when calling PrivateApi#v0TaxonomyPrivateConceptPost");
     e.printStackTrace();
 }
 ```
@@ -97,9 +97,9 @@ No authorization required
  - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
  - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
 
-<a name="taxonomyPrivateReplaceConceptPost"></a>
-# **taxonomyPrivateReplaceConceptPost**
-> taxonomyPrivateReplaceConceptPost(oldConceptId, newConceptId)
+<a name="v0TaxonomyPrivateReplaceConceptPost"></a>
+# **v0TaxonomyPrivateReplaceConceptPost**
+> v0TaxonomyPrivateReplaceConceptPost(oldConceptId, newConceptId)
 
 Replace old concept with a new concept.
 
@@ -114,9 +114,9 @@ PrivateApi apiInstance = new PrivateApi();
 String oldConceptId = "oldConceptId_example"; // String | 
 String newConceptId = "newConceptId_example"; // String | 
 try {
-    apiInstance.taxonomyPrivateReplaceConceptPost(oldConceptId, newConceptId);
+    apiInstance.v0TaxonomyPrivateReplaceConceptPost(oldConceptId, newConceptId);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PrivateApi#taxonomyPrivateReplaceConceptPost");
+    System.err.println("Exception when calling PrivateApi#v0TaxonomyPrivateReplaceConceptPost");
     e.printStackTrace();
 }
 ```
