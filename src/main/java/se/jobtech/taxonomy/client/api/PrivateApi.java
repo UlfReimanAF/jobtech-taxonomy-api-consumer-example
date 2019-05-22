@@ -13,10 +13,13 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.util.UriComponentsBuilder;
 import se.jobtech.taxonomy.client.invoker.ApiClient;
+import se.jobtech.taxonomy.client.model.ERRORUNKNOWN;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-05-21T08:53:05.447+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-05-22T16:42:59.138+02:00")
 @Component("se.jobtech.taxonomy.client.api.PrivateApi")
 public class PrivateApi {
     private ApiClient apiClient;
@@ -130,6 +133,133 @@ public class PrivateApi {
         ParameterizedTypeReference<Void> returnType = new ParameterizedTypeReference<Void>( ) {
         };
         apiClient.invokeAPI( path, HttpMethod.POST, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType );
+    }
+
+    /**
+     * Relation graphs.
+     *
+     * <p><b>200</b> -
+     * <p><b>500</b> -
+     *
+     * @param relationType
+     * @return ERRORUNKNOWN
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ERRORUNKNOWN v0TaxonomyPrivateRelationGraphRelationTypeGet( String relationType ) throws RestClientException {
+        Object postBody = null;
+
+        // verify the required parameter 'relationType' is set
+        if (relationType == null) {
+            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'relationType' when calling v0TaxonomyPrivateRelationGraphRelationTypeGet" );
+        }
+
+        // create path and map variables
+        final Map<String, Object> uriVariables = new HashMap<String, Object>( );
+        uriVariables.put( "relation-type", relationType );
+        String path = UriComponentsBuilder.fromPath( "/v0/taxonomy/private/relation/graph/{relation-type}" ).buildAndExpand( uriVariables ).toUriString( );
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>( );
+        final HttpHeaders headerParams = new HttpHeaders( );
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>( );
+
+        final String[] accepts = {
+                "application/json", "application/transit+msgpack", "application/transit+json", "application/edn"
+        };
+        final List<MediaType> accept = apiClient.selectHeaderAccept( accepts );
+        final String[] contentTypes = {
+                "application/json", "application/transit+msgpack", "application/transit+json", "application/edn"
+        };
+        final MediaType contentType = apiClient.selectHeaderContentType( contentTypes );
+
+        String[] authNames = new String[]{};
+
+        ParameterizedTypeReference<ERRORUNKNOWN> returnType = new ParameterizedTypeReference<ERRORUNKNOWN>( ) {
+        };
+        return apiClient.invokeAPI( path, HttpMethod.GET, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType );
+    }
+
+    /**
+     * Relation graphs.
+     *
+     * <p><b>200</b> -
+     * <p><b>500</b> -
+     *
+     * @param relationType
+     * @param id
+     * @return ERRORUNKNOWN
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ERRORUNKNOWN v0TaxonomyPrivateRelationGraphRelationTypeIdGet( String relationType, String id ) throws RestClientException {
+        Object postBody = null;
+
+        // verify the required parameter 'relationType' is set
+        if (relationType == null) {
+            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'relationType' when calling v0TaxonomyPrivateRelationGraphRelationTypeIdGet" );
+        }
+
+        // verify the required parameter 'id' is set
+        if (id == null) {
+            throw new HttpClientErrorException( HttpStatus.BAD_REQUEST, "Missing the required parameter 'id' when calling v0TaxonomyPrivateRelationGraphRelationTypeIdGet" );
+        }
+
+        // create path and map variables
+        final Map<String, Object> uriVariables = new HashMap<String, Object>( );
+        uriVariables.put( "relation-type", relationType );
+        uriVariables.put( "id", id );
+        String path = UriComponentsBuilder.fromPath( "/v0/taxonomy/private/relation/graph/{relation-type}/{id}" ).buildAndExpand( uriVariables ).toUriString( );
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>( );
+        final HttpHeaders headerParams = new HttpHeaders( );
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>( );
+
+        final String[] accepts = {
+                "application/json", "application/transit+msgpack", "application/transit+json", "application/edn"
+        };
+        final List<MediaType> accept = apiClient.selectHeaderAccept( accepts );
+        final String[] contentTypes = {
+                "application/json", "application/transit+msgpack", "application/transit+json", "application/edn"
+        };
+        final MediaType contentType = apiClient.selectHeaderContentType( contentTypes );
+
+        String[] authNames = new String[]{};
+
+        ParameterizedTypeReference<ERRORUNKNOWN> returnType = new ParameterizedTypeReference<ERRORUNKNOWN>( ) {
+        };
+        return apiClient.invokeAPI( path, HttpMethod.GET, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType );
+    }
+
+    /**
+     * Relation graphs.
+     *
+     * <p><b>200</b> -
+     * <p><b>500</b> -
+     *
+     * @return ERRORUNKNOWN
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ERRORUNKNOWN v0TaxonomyPrivateRelationTypesGet() throws RestClientException {
+        Object postBody = null;
+
+        String path = UriComponentsBuilder.fromPath( "/v0/taxonomy/private/relation/types" ).build( ).toUriString( );
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>( );
+        final HttpHeaders headerParams = new HttpHeaders( );
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>( );
+
+        final String[] accepts = {
+                "application/json", "application/transit+msgpack", "application/transit+json", "application/edn"
+        };
+        final List<MediaType> accept = apiClient.selectHeaderAccept( accepts );
+        final String[] contentTypes = {
+                "application/json", "application/transit+msgpack", "application/transit+json", "application/edn"
+        };
+        final MediaType contentType = apiClient.selectHeaderContentType( contentTypes );
+
+        String[] authNames = new String[]{};
+
+        ParameterizedTypeReference<ERRORUNKNOWN> returnType = new ParameterizedTypeReference<ERRORUNKNOWN>( ) {
+        };
+        return apiClient.invokeAPI( path, HttpMethod.GET, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType );
     }
 
     /**

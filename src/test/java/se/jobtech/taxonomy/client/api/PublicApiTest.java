@@ -13,13 +13,14 @@
 
 package se.jobtech.taxonomy.client.api;
 
-import org.junit.Ignore;
 import org.junit.Test;
-import se.jobtech.taxonomy.client.model.*;
+import se.jobtech.taxonomy.client.model.ERRORUNKNOWN;
+import se.jobtech.taxonomy.client.model.Response38969;
+import se.jobtech.taxonomy.client.model.Response38971;
+import se.jobtech.taxonomy.client.model.Response38973;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
@@ -40,56 +41,21 @@ public class PublicApiTest {
         String fromDateTime = "2018-08-08 14:00:00";
         Long offset = null;
         Long limit = null;
-        List<Response3254> response = api.v0TaxonomyPublicChangesGet( fromDateTime, offset, limit );
+        List<Response38969> response = api.v0TaxonomyPublicChangesGet( fromDateTime, offset, limit );
 
-    }
-
-    /**
-     * Read all concepts of the given type.
-     *
-     * @throws Exception if the Api call fails
-     */
-    @Test
-    public void v0TaxonomyPublicConceptAllGetTest() {
-        String type = "driving-license";
-        api.v0TaxonomyPublicConceptAllGet( type );
-
-    }
-
-    /**
-     * Read a concept by ID.
-     *
-     * @throws Exception if the Api call fails
-     */
-    @Test
-    public void v0TaxonomyPublicIdConseptTest() {
-        String id = "hK8X_cX9_5P4";
-        api.v0TaxonomyPublicConceptGet( id );
-    }
-
-    /**
-     * Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
-     *
-     * @throws Exception if the Api call fails
-     */
-    @Test
-    public void v0TaxonomyPublicConceptHistorySinceGetTest() {
-        String dateTime = "2018-08-08 14:00:00";
-        List<Response3278> response = api.v0TaxonomyPublicConceptHistorySinceGet( dateTime );
         assertNotNull( response );
-
     }
 
     /**
-     * Read a list of all taxonomy types.
+     * Return a list of all taxonomy types.
      *
      * @throws Exception if the Api call fails
      */
     @Test
     public void v0TaxonomyPublicConceptTypesGetTest() {
-        api.v0TaxonomyPublicConceptTypesGet( );
-
-          }
+        List<String> response = api.v0TaxonomyPublicConceptTypesGet( );
+        assertNotNull( response );
+    }
 
     /**
      * Get concepts.
@@ -104,45 +70,22 @@ public class PublicApiTest {
         Boolean deprecated = null;
         Long offset = null;
         Long limit = null;
-        List<Response3257> response = api.v0TaxonomyPublicConceptsGet( id, preferredLabel, type, deprecated, offset, limit );
+        List<Response38971> response = api.v0TaxonomyPublicConceptsGet( id, preferredLabel, type, deprecated, offset, limit );
         assertNotNull( response );
-
-
     }
 
-
     /**
-     * Get concepts.
+     * Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
      *
      * @throws Exception if the Api call fails
      */
-    @Test
-    public void v0TaxonomyPublicConceptsGetDepricatedTest() {
-        String id = null;
-        String preferredLabel = null;
-        String type = "occupation-name";
-        Boolean deprecated = true;
-        Long offset = null;
-        Long limit = null;
-        List<Response3257> response = api.v0TaxonomyPublicConceptsGet( id, preferredLabel, type, deprecated, offset, limit );
-        assertNotNull( response );
+    //@Test
+    public void v0TaxonomyPublicDeprecatedConceptHistorySinceGetTest() {
+        String dateTime = null;
+        ERRORUNKNOWN response = api.v0TaxonomyPublicDeprecatedConceptHistorySinceGet( dateTime );
 
-
+        // TODO: test validations
     }
-
-
-    /**
-     * Show the complete history.
-     *
-     * @throws Exception if the Api call fails
-     */
-    @Test
-    public void v0TaxonomyPublicFullHistoryGetTest() {
-        List<Response3276> response = api.v0TaxonomyPublicFullHistoryGet( );
-        assertNotNull( response );
-
-    }
-
 
     /**
      * get concepts by part of string
@@ -155,40 +98,9 @@ public class PublicApiTest {
         String type = "language";
         Long offset = 0L;
         Long limit = 1L;
-        List<Response3259> response = api.v0TaxonomyPublicSearchGet( q, type, offset, limit );
+        List<Response38973> response = api.v0TaxonomyPublicSearchGet( q, type, offset, limit );
+
         assertNotNull( response );
-        assertEquals( response.size(),1 );
-
-
-        // TODO: test validations
-    }
-
-    /**
-     * Search for a term across all taxonomies.
-     *
-     * @throws Exception if the Api call fails
-     */
-    @Test
-    public void v0TaxonomyPublicTermGetTest() {
-        String term = "Danska";
-        List<Response3270> response = api.v0TaxonomyPublicTermGet( term );
-        assertNotNull( response );
-
-        // TODO: test validations
-    }
-
-    /**
-     * get concepts by part of string
-     *
-     * @throws Exception if the Api call fails
-     */
-    @Test
-    public void v0TaxonomyPublicTermPartGetTest() {
-        String term = "Danska";
-        List<Response3273> response = api.v0TaxonomyPublicTermPartGet( term );
-        assertNotNull( response );
-
-        // TODO: test validations
     }
 
 }

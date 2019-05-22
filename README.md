@@ -2,7 +2,7 @@
 
 Jobtech Taxonomy
 - API version: 0.9.0
-  - Build date: 2019-05-21T08:53:05.447+02:00
+  - Build date: 2019-05-22T16:42:59.138+02:00
 
 Jobtech taxonomy services
 
@@ -102,52 +102,31 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *PrivateApi* | [**v0TaxonomyPrivateConceptDelete**](docs/PrivateApi.md#v0TaxonomyPrivateConceptDelete) | **DELETE** /v0/taxonomy/private/concept | Retract the concept with the given ID.
 *PrivateApi* | [**v0TaxonomyPrivateConceptPost**](docs/PrivateApi.md#v0TaxonomyPrivateConceptPost) | **POST** /v0/taxonomy/private/concept | Assert a new concept.
+*PrivateApi* | [**v0TaxonomyPrivateRelationGraphRelationTypeGet**](docs/PrivateApi.md#v0TaxonomyPrivateRelationGraphRelationTypeGet) | **GET** /v0/taxonomy/private/relation/graph/{relation-type} | Relation graphs.
+*PrivateApi* | [**v0TaxonomyPrivateRelationGraphRelationTypeIdGet**](docs/PrivateApi.md#v0TaxonomyPrivateRelationGraphRelationTypeIdGet) | **GET** /v0/taxonomy/private/relation/graph/{relation-type}/{id} | Relation graphs.
+*PrivateApi* | [**v0TaxonomyPrivateRelationTypesGet**](docs/PrivateApi.md#v0TaxonomyPrivateRelationTypesGet) | **GET** /v0/taxonomy/private/relation/types | Relation graphs.
 *PrivateApi* | [**v0TaxonomyPrivateReplaceConceptPost**](docs/PrivateApi.md#v0TaxonomyPrivateReplaceConceptPost) | **POST** /v0/taxonomy/private/replace-concept | Replace old concept with a new concept.
 *PublicApi* | [**v0TaxonomyPublicChangesGet**](docs/PublicApi.md#v0TaxonomyPublicChangesGet) | **GET** /v0/taxonomy/public/changes | Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
-*PublicApi* | [**v0TaxonomyPublicConceptAllGet**](docs/PublicApi.md#v0TaxonomyPublicConceptAllGet) | **GET** /v0/taxonomy/public/concept/all | Read all concepts of the given type.
-*PublicApi* | [**v0TaxonomyPublicConceptGet**](docs/PublicApi.md#v0TaxonomyPublicConceptGet) | **GET** /v0/taxonomy/public/concept | Read a concept by ID.
-*PublicApi* | [**v0TaxonomyPublicConceptHistorySinceGet**](docs/PublicApi.md#v0TaxonomyPublicConceptHistorySinceGet) | **GET** /v0/taxonomy/public/concept-history-since | Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
-*PublicApi* | [**v0TaxonomyPublicConceptTypesGet**](docs/PublicApi.md#v0TaxonomyPublicConceptTypesGet) | **GET** /v0/taxonomy/public/concept/types | Read a list of all taxonomy types.
+*PublicApi* | [**v0TaxonomyPublicConceptTypesGet**](docs/PublicApi.md#v0TaxonomyPublicConceptTypesGet) | **GET** /v0/taxonomy/public/concept/types | Return a list of all taxonomy types.
 *PublicApi* | [**v0TaxonomyPublicConceptsGet**](docs/PublicApi.md#v0TaxonomyPublicConceptsGet) | **GET** /v0/taxonomy/public/concepts | Get concepts.
 *PublicApi* | [**v0TaxonomyPublicDeprecatedConceptHistorySinceGet**](docs/PublicApi.md#v0TaxonomyPublicDeprecatedConceptHistorySinceGet) | **GET** /v0/taxonomy/public/deprecated-concept-history-since | Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
-*PublicApi* | [**v0TaxonomyPublicFullHistoryGet**](docs/PublicApi.md#v0TaxonomyPublicFullHistoryGet) | **GET** /v0/taxonomy/public/full-history | Show the complete history.
-*PublicApi* | [**v0TaxonomyPublicRelationGraphRelationTypeGet**](docs/PublicApi.md#v0TaxonomyPublicRelationGraphRelationTypeGet) | **GET** /v0/taxonomy/public/relation/graph/{relation-type} | Relation graphs.
-*PublicApi* | [**v0TaxonomyPublicRelationGraphRelationTypeIdGet**](docs/PublicApi.md#v0TaxonomyPublicRelationGraphRelationTypeIdGet) | **GET** /v0/taxonomy/public/relation/graph/{relation-type}/{id} | Relation graphs.
-*PublicApi* | [**v0TaxonomyPublicRelationTypesGet**](docs/PublicApi.md#v0TaxonomyPublicRelationTypesGet) | **GET** /v0/taxonomy/public/relation/types | Relation graphs.
 *PublicApi* | [**v0TaxonomyPublicSearchGet**](docs/PublicApi.md#v0TaxonomyPublicSearchGet) | **GET** /v0/taxonomy/public/search | get concepts by part of string
-*PublicApi* | [**v0TaxonomyPublicTermGet**](docs/PublicApi.md#v0TaxonomyPublicTermGet) | **GET** /v0/taxonomy/public/term | Search for a term across all taxonomies.
-*PublicApi* | [**v0TaxonomyPublicTermPartGet**](docs/PublicApi.md#v0TaxonomyPublicTermPartGet) | **GET** /v0/taxonomy/public/term-part | get concepts by part of string
 
 
 ## Documentation for Models
 
- - [Response3254](docs/Response3254.md)
- - [Response3254Concept](docs/Response3254Concept.md)
- - [Response3255](docs/Response3255.md)
- - [Response3256](docs/Response3256.md)
- - [Response3257](docs/Response3257.md)
- - [Response3258](docs/Response3258.md)
- - [Response3259](docs/Response3259.md)
- - [Response3260](docs/Response3260.md)
- - [Response3261](docs/Response3261.md)
- - [Response3263](docs/Response3263.md)
- - [Response3264](docs/Response3264.md)
- - [Response3266](docs/Response3266.md)
- - [Response3267](docs/Response3267.md)
- - [Response3269](docs/Response3269.md)
- - [Response3270](docs/Response3270.md)
- - [Response3271](docs/Response3271.md)
- - [Response3272](docs/Response3272.md)
- - [Response3273](docs/Response3273.md)
- - [Response3274](docs/Response3274.md)
- - [Response3275](docs/Response3275.md)
- - [Response3276](docs/Response3276.md)
- - [Response3277](docs/Response3277.md)
- - [Response3278](docs/Response3278.md)
- - [Response3279](docs/Response3279.md)
- - [Response3280](docs/Response3280.md)
- - [Response3282](docs/Response3282.md)
- - [Response3283](docs/Response3283.md)
+ - [Response38969](docs/Response38969.md)
+ - [Response38969Concept](docs/Response38969Concept.md)
+ - [Response38970](docs/Response38970.md)
+ - [Response38971](docs/Response38971.md)
+ - [Response38972](docs/Response38972.md)
+ - [Response38973](docs/Response38973.md)
+ - [Response38974](docs/Response38974.md)
+ - [Response38976](docs/Response38976.md)
+ - [Response38978](docs/Response38978.md)
+ - [Response38980](docs/Response38980.md)
+ - [Response38982](docs/Response38982.md)
+ - [Response38984](docs/Response38984.md)
 
 
 ## Documentation for Authorization
