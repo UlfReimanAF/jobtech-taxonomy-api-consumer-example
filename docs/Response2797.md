@@ -1,13 +1,11 @@
 
-# Response2788
+# Response2797
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | 
-**definition** | **String** |  | 
 **type** | **String** |  | 
-**preferredLabel** | **String** |  |  [optional]
+**message** | **String** |  | 
 
 
 

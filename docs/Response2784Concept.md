@@ -1,12 +1,12 @@
 
-# Response2788
+# Response2784Concept
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
-**definition** | **String** |  | 
 **type** | **String** |  | 
+**deprecated** | **Boolean** |  |  [optional]
 **preferredLabel** | **String** |  |  [optional]
 
 

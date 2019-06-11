@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
+**type** | **String** |  | 
 **definition** | **String** |  | 
-**instanceType** | **String** |  | 
-**preferredLabel** | **String** |  |  [optional]
+**preferredLabel** | **String** |  | 
 **deprecated** | **Boolean** |  |  [optional]
 
 

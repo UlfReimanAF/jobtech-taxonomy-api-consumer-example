@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="v0TaxonomyPublicChangesGet"></a>
 # **v0TaxonomyPublicChangesGet**
-> List&lt;Response38969&gt; v0TaxonomyPublicChangesGet(fromDateTime, offset, limit)
+> List&lt;Response2784&gt; v0TaxonomyPublicChangesGet(fromDateTime, offset, limit)
 
 Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
 
@@ -29,7 +29,7 @@ String fromDateTime = "fromDateTime_example"; // String |
 Long offset = 789L; // Long | 
 Long limit = 789L; // Long | 
 try {
-    List<Response38969> result = apiInstance.v0TaxonomyPublicChangesGet(fromDateTime, offset, limit);
+    List<Response2784> result = apiInstance.v0TaxonomyPublicChangesGet(fromDateTime, offset, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PublicApi#v0TaxonomyPublicChangesGet");
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;Response38969&gt;**](Response38969.md)
+[**List&lt;Response2784&gt;**](Response2784.md)
 
 ### Authorization
 
@@ -99,7 +99,7 @@ No authorization required
 
 <a name="v0TaxonomyPublicConceptsGet"></a>
 # **v0TaxonomyPublicConceptsGet**
-> List&lt;Response38971&gt; v0TaxonomyPublicConceptsGet(id, preferredLabel, type, deprecated, offset, limit)
+> List&lt;Response2786&gt; v0TaxonomyPublicConceptsGet(id, preferredLabel, type, deprecated, offset, limit)
 
 Get concepts.
 
@@ -118,7 +118,7 @@ Boolean deprecated = true; // Boolean |
 Long offset = 789L; // Long | 
 Long limit = 789L; // Long | 
 try {
-    List<Response38971> result = apiInstance.v0TaxonomyPublicConceptsGet(id, preferredLabel, type, deprecated, offset, limit);
+    List<Response2786> result = apiInstance.v0TaxonomyPublicConceptsGet(id, preferredLabel, type, deprecated, offset, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PublicApi#v0TaxonomyPublicConceptsGet");
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;Response38971&gt;**](Response38971.md)
+[**List&lt;Response2786&gt;**](Response2786.md)
 
 ### Authorization
 
@@ -195,7 +195,7 @@ No authorization required
 
 <a name="v0TaxonomyPublicSearchGet"></a>
 # **v0TaxonomyPublicSearchGet**
-> List&lt;Response38973&gt; v0TaxonomyPublicSearchGet(q, type, offset, limit)
+> List&lt;Response2788&gt; v0TaxonomyPublicSearchGet(q, type, offset, limit)
 
 get concepts by part of string
 
@@ -212,7 +212,7 @@ String type = "type_example"; // String |
 Long offset = 789L; // Long | 
 Long limit = 789L; // Long | 
 try {
-    List<Response38973> result = apiInstance.v0TaxonomyPublicSearchGet(q, type, offset, limit);
+    List<Response2788> result = apiInstance.v0TaxonomyPublicSearchGet(q, type, offset, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PublicApi#v0TaxonomyPublicSearchGet");
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;Response38973&gt;**](Response38973.md)
+[**List&lt;Response2788&gt;**](Response2788.md)
 
 ### Authorization
 
