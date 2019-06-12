@@ -8,6 +8,8 @@ import se.jobtech.taxonomy.client.model.Response2788;
 
 import java.util.List;
 
+import static org.junit.Assert.assertNotNull;
+
 /**
  * API tests for PublicApi
  */
@@ -29,7 +31,7 @@ public class PublicApiTest {
         Long limit = null;
         List<Response2784> response = api.v0TaxonomyPublicChangesGet( fromDateTime, offset, limit );
 
-        // TODO: test validations
+        assertNotNull( response );
     }
 
     /**
@@ -41,7 +43,7 @@ public class PublicApiTest {
     public void v0TaxonomyPublicConceptTypesGetTest() {
         List<String> response = api.v0TaxonomyPublicConceptTypesGet( );
 
-        // TODO: test validations
+        assertNotNull( response );
     }
 
     /**
@@ -54,12 +56,13 @@ public class PublicApiTest {
         String id = "vVTg_C9s_8NG";
         String preferredLabel = "Drejare";
         String type = "occupation-name";
-        Boolean deprecated = false;
+        Boolean deprecated = null;
         Long offset = null;
         Long limit = null;
         List<Response2786> response = api.v0TaxonomyPublicConceptsGet( id, preferredLabel, type, deprecated, offset, limit );
 
         // TODO: test validations
+        assertNotNull( response );
     }
 
     /**
@@ -67,7 +70,7 @@ public class PublicApiTest {
      *
      * @throws Exception if the Api call fails
      */
-   // @Test
+//@Test
     public void v0TaxonomyPublicDeprecatedConceptHistorySinceGetTest() {
         String fromDateTime = "2018-08-08 14:00:00";
         ERRORUNKNOWN response = api.v0TaxonomyPublicDeprecatedConceptHistorySinceGet( fromDateTime );
@@ -87,6 +90,7 @@ public class PublicApiTest {
         Long offset = 0L;
         Long limit = 1L;
         List<Response2788> response = api.v0TaxonomyPublicSearchGet(q, type, offset, limit);
+
 
         // TODO: test validations
     }
