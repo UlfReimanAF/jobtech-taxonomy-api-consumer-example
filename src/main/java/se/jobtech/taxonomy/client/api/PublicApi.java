@@ -13,7 +13,6 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.util.UriComponentsBuilder;
 import se.jobtech.taxonomy.client.invoker.ApiClient;
-import se.jobtech.taxonomy.client.model.ERRORUNKNOWN;
 import se.jobtech.taxonomy.client.model.Response2784;
 import se.jobtech.taxonomy.client.model.Response2786;
 import se.jobtech.taxonomy.client.model.Response2788;
