@@ -11,14 +11,14 @@ public class OAuth implements Authentication {
         return accessToken;
     }
 
-    public void setAccessToken( String accessToken ) {
+    public void setAccessToken(String accessToken) {
         this.accessToken = accessToken;
     }
 
     @Override
-    public void applyToParams( MultiValueMap<String, String> queryParams, HttpHeaders headerParams ) {
+    public void applyToParams(MultiValueMap<String, String> queryParams, HttpHeaders headerParams) {
         if (accessToken != null) {
-            headerParams.add( HttpHeaders.AUTHORIZATION, "Bearer " + accessToken );
+            headerParams.add(HttpHeaders.AUTHORIZATION, "Bearer " + accessToken);
         }
     }
 }

@@ -11,7 +11,7 @@ public class ApiKeyAuth implements Authentication {
     private String apiKey;
     private String apiKeyPrefix;
 
-    public ApiKeyAuth( String location, String paramName ) {
+    public ApiKeyAuth(String location, String paramName) {
         this.location = location;
         this.paramName = paramName;
     }
@@ -28,7 +28,7 @@ public class ApiKeyAuth implements Authentication {
         return apiKey;
     }
 
-    public void setApiKey( String apiKey ) {
+    public void setApiKey(String apiKey) {
         this.apiKey = apiKey;
     }
 
@@ -36,12 +36,12 @@ public class ApiKeyAuth implements Authentication {
         return apiKeyPrefix;
     }
 
-    public void setApiKeyPrefix( String apiKeyPrefix ) {
+    public void setApiKeyPrefix(String apiKeyPrefix) {
         this.apiKeyPrefix = apiKeyPrefix;
     }
 
     @Override
-    public void applyToParams( MultiValueMap<String, String> queryParams, HttpHeaders headerParams ) {
+    public void applyToParams(MultiValueMap<String, String> queryParams, HttpHeaders headerParams) {
         if (apiKey == null) {
             return;
         }
@@ -51,10 +51,10 @@ public class ApiKeyAuth implements Authentication {
         } else {
             value = apiKey;
         }
-        if (location.equals( "query" )) {
-            queryParams.add( paramName, value );
-        } else if (location.equals( "header" )) {
-            headerParams.add( paramName, value );
-        }
+        if (location.equals("query")) {
+            queryParams.add(paramName, value);
+        } else if (location.equals("header")) {
+            headerParams.add(paramName, value);
+       }
     }
 }
