@@ -36,7 +36,7 @@ import java.text.ParseException;
 import java.util.*;
 import java.util.Map.Entry;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-11T15:05:41.248+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-17T13:00:54.439+02:00")
 @Component("se.jobtech.taxonomy.client.invoker.ApiClient")
 public class ApiClient {
     private boolean debugging = false;
@@ -514,12 +514,10 @@ public class ApiClient {
 
         RequestEntity<Object> requestEntity = requestBuilder.body( selectBody( body, formParams, contentType ) );
 
-
         ResponseEntity<T> responseEntity = restTemplate.exchange( requestEntity, returnType );
 
         statusCode = responseEntity.getStatusCode( );
         responseHeaders = responseEntity.getHeaders( );
-
 
         if (responseEntity.getStatusCode( ) == HttpStatus.NO_CONTENT) {
             return null;

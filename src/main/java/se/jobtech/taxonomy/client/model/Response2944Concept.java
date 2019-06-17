@@ -19,23 +19,23 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /**
- * Response2788
+ * Response2944Concept
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-11T15:05:41.248+02:00")
-public class Response2788 {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-17T13:00:54.439+02:00")
+public class Response2944Concept {
     @JsonProperty("id")
     private String id = null;
-
-    @JsonProperty("definition")
-    private String definition = null;
 
     @JsonProperty("type")
     private String type = null;
 
+    @JsonProperty("deprecated")
+    private Boolean deprecated = null;
+
     @JsonProperty("preferredLabel")
     private String preferredLabel = null;
 
-    public Response2788 id( String id ) {
+    public Response2944Concept id( String id ) {
         this.id = id;
         return this;
     }
@@ -54,26 +54,7 @@ public class Response2788 {
         this.id = id;
     }
 
-    public Response2788 definition( String definition ) {
-        this.definition = definition;
-        return this;
-    }
-
-    /**
-     * Get definition
-     *
-     * @return definition
-     **/
-    @ApiModelProperty(required = true, value = "")
-    public String getDefinition() {
-        return definition;
-    }
-
-    public void setDefinition( String definition ) {
-        this.definition = definition;
-    }
-
-    public Response2788 type( String type ) {
+    public Response2944Concept type( String type ) {
         this.type = type;
         return this;
     }
@@ -92,7 +73,26 @@ public class Response2788 {
         this.type = type;
     }
 
-    public Response2788 preferredLabel( String preferredLabel ) {
+    public Response2944Concept deprecated( Boolean deprecated ) {
+        this.deprecated = deprecated;
+        return this;
+    }
+
+    /**
+     * Get deprecated
+     *
+     * @return deprecated
+     **/
+    @ApiModelProperty(value = "")
+    public Boolean isDeprecated() {
+        return deprecated;
+    }
+
+    public void setDeprecated( Boolean deprecated ) {
+        this.deprecated = deprecated;
+    }
+
+    public Response2944Concept preferredLabel( String preferredLabel ) {
         this.preferredLabel = preferredLabel;
         return this;
     }
@@ -120,27 +120,27 @@ public class Response2788 {
         if (o == null || getClass( ) != o.getClass( )) {
             return false;
         }
-        Response2788 response2788 = (Response2788) o;
-        return Objects.equals( this.id, response2788.id ) &&
-                Objects.equals( this.definition, response2788.definition ) &&
-                Objects.equals( this.type, response2788.type ) &&
-                Objects.equals( this.preferredLabel, response2788.preferredLabel );
+        Response2944Concept response2944Concept = (Response2944Concept) o;
+        return Objects.equals( this.id, response2944Concept.id ) &&
+                Objects.equals( this.type, response2944Concept.type ) &&
+                Objects.equals( this.deprecated, response2944Concept.deprecated ) &&
+                Objects.equals( this.preferredLabel, response2944Concept.preferredLabel );
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash( id, definition, type, preferredLabel );
+        return Objects.hash( id, type, deprecated, preferredLabel );
     }
 
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder( );
-        sb.append( "class Response2788 {\n" );
+        sb.append( "class Response2944Concept {\n" );
 
         sb.append( "    id: " ).append( toIndentedString( id ) ).append( "\n" );
-        sb.append( "    definition: " ).append( toIndentedString( definition ) ).append( "\n" );
         sb.append( "    type: " ).append( toIndentedString( type ) ).append( "\n" );
+        sb.append( "    deprecated: " ).append( toIndentedString( deprecated ) ).append( "\n" );
         sb.append( "    preferredLabel: " ).append( toIndentedString( preferredLabel ) ).append( "\n" );
         sb.append( "}" );
         return sb.toString( );

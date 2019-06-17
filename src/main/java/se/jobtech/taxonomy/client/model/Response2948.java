@@ -19,10 +19,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /**
- * Response2788
+ * Response2948
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-11T15:05:41.248+02:00")
-public class Response2788 {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-17T13:00:54.439+02:00")
+public class Response2948 {
     @JsonProperty("id")
     private String id = null;
 
@@ -35,7 +35,7 @@ public class Response2788 {
     @JsonProperty("preferredLabel")
     private String preferredLabel = null;
 
-    public Response2788 id( String id ) {
+    public Response2948 id( String id ) {
         this.id = id;
         return this;
     }
@@ -54,7 +54,7 @@ public class Response2788 {
         this.id = id;
     }
 
-    public Response2788 definition( String definition ) {
+    public Response2948 definition( String definition ) {
         this.definition = definition;
         return this;
     }
@@ -73,7 +73,7 @@ public class Response2788 {
         this.definition = definition;
     }
 
-    public Response2788 type( String type ) {
+    public Response2948 type( String type ) {
         this.type = type;
         return this;
     }
@@ -92,7 +92,7 @@ public class Response2788 {
         this.type = type;
     }
 
-    public Response2788 preferredLabel( String preferredLabel ) {
+    public Response2948 preferredLabel( String preferredLabel ) {
         this.preferredLabel = preferredLabel;
         return this;
     }
@@ -120,11 +120,11 @@ public class Response2788 {
         if (o == null || getClass( ) != o.getClass( )) {
             return false;
         }
-        Response2788 response2788 = (Response2788) o;
-        return Objects.equals( this.id, response2788.id ) &&
-                Objects.equals( this.definition, response2788.definition ) &&
-                Objects.equals( this.type, response2788.type ) &&
-                Objects.equals( this.preferredLabel, response2788.preferredLabel );
+        Response2948 response2948 = (Response2948) o;
+        return Objects.equals( this.id, response2948.id ) &&
+                Objects.equals( this.definition, response2948.definition ) &&
+                Objects.equals( this.type, response2948.type ) &&
+                Objects.equals( this.preferredLabel, response2948.preferredLabel );
     }
 
     @Override
@@ -136,7 +136,7 @@ public class Response2788 {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder( );
-        sb.append( "class Response2788 {\n" );
+        sb.append( "class Response2948 {\n" );
 
         sb.append( "    id: " ).append( toIndentedString( id ) ).append( "\n" );
         sb.append( "    definition: " ).append( toIndentedString( definition ) ).append( "\n" );
