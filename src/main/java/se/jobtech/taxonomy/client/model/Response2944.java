@@ -35,7 +35,7 @@ public class Response2944 {
   private Long transactionId = null;
 
   @JsonProperty("timestamp")
-  private OffsetDateTime timestamp = null;
+  private String timestamp = null;
 
   @JsonProperty("concept")
   private Response2944Concept concept = null;
@@ -76,7 +76,7 @@ public class Response2944 {
     this.transactionId = transactionId;
   }
 
-  public Response2944 timestamp(OffsetDateTime timestamp) {
+  public Response2944 timestamp(String timestamp) {
     this.timestamp = timestamp;
     return this;
   }
@@ -86,11 +86,11 @@ public class Response2944 {
    * @return timestamp
   **/
   @ApiModelProperty(required = true, value = "")
-  public OffsetDateTime getTimestamp() {
+  public String getTimestamp() {
     return timestamp;
   }
 
-  public void setTimestamp(OffsetDateTime timestamp) {
+  public void setTimestamp(String timestamp) {
     this.timestamp = timestamp;
   }
 

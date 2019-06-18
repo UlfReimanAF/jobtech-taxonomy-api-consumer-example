@@ -14,7 +14,6 @@
 package se.jobtech.taxonomy.client.api;
 
 
-import org.junit.Ignore;
 import org.junit.Test;
 import se.jobtech.taxonomy.client.model.Response2944;
 import se.jobtech.taxonomy.client.model.Response2946;
