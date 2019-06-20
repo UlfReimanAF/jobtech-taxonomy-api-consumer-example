@@ -105,4 +105,33 @@ public class PublicApiTest {
         assertNotNull( response );
     }
 
+
+    @Test
+    public void v0TaxonomyPublicSearchLoadTest() {
+        for (int i = 0; i < 50; i++) {
+            char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+            for (char c : alphabet) {
+                List<Response2980> responseS = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "skill", null, null );
+                List<Response2980> responseOn = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "occupation-name", null, null );
+                List<Response2980> responseOg = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "occupation-group", null, null );
+                List<Response2980> responseOf = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "occupation-field", null, null );
+                List<Response2980> responseD = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "driving-license", null, null );
+                List<Response2980> responseSH = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "skill-headline", null, null );
+                List<Response2980> responseL = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "language", null, null );
+                assertNotNull( responseS );
+                assertNotNull( responseOn );
+                assertNotNull( responseOg );
+                assertNotNull( responseOf );
+                assertNotNull( responseD );
+                assertNotNull( responseSH );
+                assertNotNull( responseL );
+            }
+
+        }
+
+
+        //   assertNotNull( responseS );
+    }
+
+
 }
