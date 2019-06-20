@@ -3,7 +3,7 @@ package se.jobtech.taxonomy.client.invoker.auth;
 import org.springframework.http.HttpHeaders;
 import org.springframework.util.MultiValueMap;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-17T13:00:54.439+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T10:19:50.664+02:00")
 public class OAuth implements Authentication {
     private String accessToken;
 

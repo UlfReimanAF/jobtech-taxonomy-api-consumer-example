@@ -19,10 +19,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /**
- * Response2944Concept
+ * Response2976Concept
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-17T13:00:54.439+02:00")
-public class Response2944Concept {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T10:19:50.664+02:00")
+public class Response2976Concept {
     @JsonProperty("id")
     private String id = null;
 
@@ -35,7 +35,7 @@ public class Response2944Concept {
     @JsonProperty("preferredLabel")
     private String preferredLabel = null;
 
-    public Response2944Concept id( String id ) {
+    public Response2976Concept id( String id ) {
         this.id = id;
         return this;
     }
@@ -54,7 +54,7 @@ public class Response2944Concept {
         this.id = id;
     }
 
-    public Response2944Concept type( String type ) {
+    public Response2976Concept type( String type ) {
         this.type = type;
         return this;
     }
@@ -73,7 +73,7 @@ public class Response2944Concept {
         this.type = type;
     }
 
-    public Response2944Concept deprecated( Boolean deprecated ) {
+    public Response2976Concept deprecated( Boolean deprecated ) {
         this.deprecated = deprecated;
         return this;
     }
@@ -92,7 +92,7 @@ public class Response2944Concept {
         this.deprecated = deprecated;
     }
 
-    public Response2944Concept preferredLabel( String preferredLabel ) {
+    public Response2976Concept preferredLabel( String preferredLabel ) {
         this.preferredLabel = preferredLabel;
         return this;
     }
@@ -120,11 +120,11 @@ public class Response2944Concept {
         if (o == null || getClass( ) != o.getClass( )) {
             return false;
         }
-        Response2944Concept response2944Concept = (Response2944Concept) o;
-        return Objects.equals( this.id, response2944Concept.id ) &&
-                Objects.equals( this.type, response2944Concept.type ) &&
-                Objects.equals( this.deprecated, response2944Concept.deprecated ) &&
-                Objects.equals( this.preferredLabel, response2944Concept.preferredLabel );
+        Response2976Concept response2976Concept = (Response2976Concept) o;
+        return Objects.equals( this.id, response2976Concept.id ) &&
+                Objects.equals( this.type, response2976Concept.type ) &&
+                Objects.equals( this.deprecated, response2976Concept.deprecated ) &&
+                Objects.equals( this.preferredLabel, response2976Concept.preferredLabel );
     }
 
     @Override
@@ -136,7 +136,7 @@ public class Response2944Concept {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder( );
-        sb.append( "class Response2944Concept {\n" );
+        sb.append( "class Response2976Concept {\n" );
 
         sb.append( "    id: " ).append( toIndentedString( id ) ).append( "\n" );
         sb.append( "    type: " ).append( toIndentedString( type ) ).append( "\n" );

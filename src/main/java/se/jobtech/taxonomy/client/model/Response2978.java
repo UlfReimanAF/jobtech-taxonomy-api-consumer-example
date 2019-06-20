@@ -19,23 +19,26 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /**
- * Response2944Concept
+ * Response2978
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-17T13:00:54.439+02:00")
-public class Response2944Concept {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T10:19:50.664+02:00")
+public class Response2978 {
     @JsonProperty("id")
     private String id = null;
 
     @JsonProperty("type")
     private String type = null;
 
-    @JsonProperty("deprecated")
-    private Boolean deprecated = null;
+    @JsonProperty("definition")
+    private String definition = null;
 
     @JsonProperty("preferredLabel")
     private String preferredLabel = null;
 
-    public Response2944Concept id( String id ) {
+    @JsonProperty("deprecated")
+    private Boolean deprecated = null;
+
+    public Response2978 id( String id ) {
         this.id = id;
         return this;
     }
@@ -54,7 +57,7 @@ public class Response2944Concept {
         this.id = id;
     }
 
-    public Response2944Concept type( String type ) {
+    public Response2978 type( String type ) {
         this.type = type;
         return this;
     }
@@ -73,7 +76,45 @@ public class Response2944Concept {
         this.type = type;
     }
 
-    public Response2944Concept deprecated( Boolean deprecated ) {
+    public Response2978 definition( String definition ) {
+        this.definition = definition;
+        return this;
+    }
+
+    /**
+     * Get definition
+     *
+     * @return definition
+     **/
+    @ApiModelProperty(required = true, value = "")
+    public String getDefinition() {
+        return definition;
+    }
+
+    public void setDefinition( String definition ) {
+        this.definition = definition;
+    }
+
+    public Response2978 preferredLabel( String preferredLabel ) {
+        this.preferredLabel = preferredLabel;
+        return this;
+    }
+
+    /**
+     * Get preferredLabel
+     *
+     * @return preferredLabel
+     **/
+    @ApiModelProperty(required = true, value = "")
+    public String getPreferredLabel() {
+        return preferredLabel;
+    }
+
+    public void setPreferredLabel( String preferredLabel ) {
+        this.preferredLabel = preferredLabel;
+    }
+
+    public Response2978 deprecated( Boolean deprecated ) {
         this.deprecated = deprecated;
         return this;
     }
@@ -92,25 +133,6 @@ public class Response2944Concept {
         this.deprecated = deprecated;
     }
 
-    public Response2944Concept preferredLabel( String preferredLabel ) {
-        this.preferredLabel = preferredLabel;
-        return this;
-    }
-
-    /**
-     * Get preferredLabel
-     *
-     * @return preferredLabel
-     **/
-    @ApiModelProperty(value = "")
-    public String getPreferredLabel() {
-        return preferredLabel;
-    }
-
-    public void setPreferredLabel( String preferredLabel ) {
-        this.preferredLabel = preferredLabel;
-    }
-
 
     @Override
     public boolean equals( java.lang.Object o ) {
@@ -120,28 +142,30 @@ public class Response2944Concept {
         if (o == null || getClass( ) != o.getClass( )) {
             return false;
         }
-        Response2944Concept response2944Concept = (Response2944Concept) o;
-        return Objects.equals( this.id, response2944Concept.id ) &&
-                Objects.equals( this.type, response2944Concept.type ) &&
-                Objects.equals( this.deprecated, response2944Concept.deprecated ) &&
-                Objects.equals( this.preferredLabel, response2944Concept.preferredLabel );
+        Response2978 response2978 = (Response2978) o;
+        return Objects.equals( this.id, response2978.id ) &&
+                Objects.equals( this.type, response2978.type ) &&
+                Objects.equals( this.definition, response2978.definition ) &&
+                Objects.equals( this.preferredLabel, response2978.preferredLabel ) &&
+                Objects.equals( this.deprecated, response2978.deprecated );
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash( id, type, deprecated, preferredLabel );
+        return Objects.hash( id, type, definition, preferredLabel, deprecated );
     }
 
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder( );
-        sb.append( "class Response2944Concept {\n" );
+        sb.append( "class Response2978 {\n" );
 
         sb.append( "    id: " ).append( toIndentedString( id ) ).append( "\n" );
         sb.append( "    type: " ).append( toIndentedString( type ) ).append( "\n" );
-        sb.append( "    deprecated: " ).append( toIndentedString( deprecated ) ).append( "\n" );
+        sb.append( "    definition: " ).append( toIndentedString( definition ) ).append( "\n" );
         sb.append( "    preferredLabel: " ).append( toIndentedString( preferredLabel ) ).append( "\n" );
+        sb.append( "    deprecated: " ).append( toIndentedString( deprecated ) ).append( "\n" );
         sb.append( "}" );
         return sb.toString( );
     }

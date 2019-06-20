@@ -13,13 +13,13 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.util.UriComponentsBuilder;
 import se.jobtech.taxonomy.client.invoker.ApiClient;
-import se.jobtech.taxonomy.client.model.Response2944;
-import se.jobtech.taxonomy.client.model.Response2946;
-import se.jobtech.taxonomy.client.model.Response2948;
+import se.jobtech.taxonomy.client.model.Response2976;
+import se.jobtech.taxonomy.client.model.Response2978;
+import se.jobtech.taxonomy.client.model.Response2980;
 
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-17T13:00:54.439+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T10:19:50.664+02:00")
 @Component("se.jobtech.taxonomy.client.api.PublicApi")
 public class PublicApi {
     private ApiClient apiClient;
@@ -50,10 +50,10 @@ public class PublicApi {
      * @param fromDateTime
      * @param offset
      * @param limit
-     * @return List&lt;Response2944&gt;
+     * @return List&lt;Response2976&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public List<Response2944> v0TaxonomyPublicChangesGet( String fromDateTime, Long offset, Long limit ) throws RestClientException {
+    public List<Response2976> v0TaxonomyPublicChangesGet( String fromDateTime, Long offset, Long limit ) throws RestClientException {
         Object postBody = null;
 
         // verify the required parameter 'fromDateTime' is set
@@ -82,7 +82,7 @@ public class PublicApi {
 
         String[] authNames = new String[]{};
 
-        ParameterizedTypeReference<List<Response2944>> returnType = new ParameterizedTypeReference<List<Response2944>>( ) {
+        ParameterizedTypeReference<List<Response2976>> returnType = new ParameterizedTypeReference<List<Response2976>>( ) {
         };
         return apiClient.invokeAPI( path, HttpMethod.GET, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType );
     }
@@ -133,10 +133,10 @@ public class PublicApi {
      * @param deprecated
      * @param offset
      * @param limit
-     * @return List&lt;Response2946&gt;
+     * @return List&lt;Response2978&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public List<Response2946> v0TaxonomyPublicConceptsGet( String id, String preferredLabel, String type, Boolean deprecated, Long offset, Long limit ) throws RestClientException {
+    public List<Response2978> v0TaxonomyPublicConceptsGet( String id, String preferredLabel, String type, Boolean deprecated, Long offset, Long limit ) throws RestClientException {
         Object postBody = null;
 
         String path = UriComponentsBuilder.fromPath( "/v0/taxonomy/public/concepts" ).build( ).toUriString( );
@@ -163,7 +163,7 @@ public class PublicApi {
 
         String[] authNames = new String[]{};
 
-        ParameterizedTypeReference<List<Response2946>> returnType = new ParameterizedTypeReference<List<Response2946>>( ) {
+        ParameterizedTypeReference<List<Response2978>> returnType = new ParameterizedTypeReference<List<Response2978>>( ) {
         };
         return apiClient.invokeAPI( path, HttpMethod.GET, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType );
     }
@@ -220,10 +220,10 @@ public class PublicApi {
      * @param type
      * @param offset
      * @param limit
-     * @return List&lt;Response2948&gt;
+     * @return List&lt;Response2980&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public List<Response2948> v0TaxonomyPublicSearchGet( String q, String type, Long offset, Long limit ) throws RestClientException {
+    public List<Response2980> v0TaxonomyPublicSearchGet( String q, String type, Long offset, Long limit ) throws RestClientException {
         Object postBody = null;
 
         // verify the required parameter 'q' is set
@@ -253,7 +253,7 @@ public class PublicApi {
 
         String[] authNames = new String[]{};
 
-        ParameterizedTypeReference<List<Response2948>> returnType = new ParameterizedTypeReference<List<Response2948>>( ) {
+        ParameterizedTypeReference<List<Response2980>> returnType = new ParameterizedTypeReference<List<Response2980>>( ) {
         };
         return apiClient.invokeAPI( path, HttpMethod.GET, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType );
     }

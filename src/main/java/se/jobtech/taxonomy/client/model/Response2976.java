@@ -19,10 +19,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /**
- * Response2944
+ * Response2976
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-17T13:00:54.439+02:00")
-public class Response2944 {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T10:19:50.664+02:00")
+public class Response2976 {
     @JsonProperty("eventType")
     private String eventType = null;
 
@@ -33,9 +33,9 @@ public class Response2944 {
     private String timestamp = null;
 
     @JsonProperty("concept")
-    private Response2944Concept concept = null;
+    private Response2976Concept concept = null;
 
-    public Response2944 eventType( String eventType ) {
+    public Response2976 eventType( String eventType ) {
         this.eventType = eventType;
         return this;
     }
@@ -54,7 +54,7 @@ public class Response2944 {
         this.eventType = eventType;
     }
 
-    public Response2944 transactionId( Long transactionId ) {
+    public Response2976 transactionId( Long transactionId ) {
         this.transactionId = transactionId;
         return this;
     }
@@ -73,7 +73,7 @@ public class Response2944 {
         this.transactionId = transactionId;
     }
 
-    public Response2944 timestamp( String timestamp ) {
+    public Response2976 timestamp( String timestamp ) {
         this.timestamp = timestamp;
         return this;
     }
@@ -92,7 +92,7 @@ public class Response2944 {
         this.timestamp = timestamp;
     }
 
-    public Response2944 concept( Response2944Concept concept ) {
+    public Response2976 concept( Response2976Concept concept ) {
         this.concept = concept;
         return this;
     }
@@ -103,11 +103,11 @@ public class Response2944 {
      * @return concept
      **/
     @ApiModelProperty(required = true, value = "")
-    public Response2944Concept getConcept() {
+    public Response2976Concept getConcept() {
         return concept;
     }
 
-    public void setConcept( Response2944Concept concept ) {
+    public void setConcept( Response2976Concept concept ) {
         this.concept = concept;
     }
 
@@ -120,11 +120,11 @@ public class Response2944 {
         if (o == null || getClass( ) != o.getClass( )) {
             return false;
         }
-        Response2944 response2944 = (Response2944) o;
-        return Objects.equals( this.eventType, response2944.eventType ) &&
-                Objects.equals( this.transactionId, response2944.transactionId ) &&
-                Objects.equals( this.timestamp, response2944.timestamp ) &&
-                Objects.equals( this.concept, response2944.concept );
+        Response2976 response2976 = (Response2976) o;
+        return Objects.equals( this.eventType, response2976.eventType ) &&
+                Objects.equals( this.transactionId, response2976.transactionId ) &&
+                Objects.equals( this.timestamp, response2976.timestamp ) &&
+                Objects.equals( this.concept, response2976.concept );
     }
 
     @Override
@@ -136,7 +136,7 @@ public class Response2944 {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder( );
-        sb.append( "class Response2944 {\n" );
+        sb.append( "class Response2976 {\n" );
 
         sb.append( "    eventType: " ).append( toIndentedString( eventType ) ).append( "\n" );
         sb.append( "    transactionId: " ).append( toIndentedString( transactionId ) ).append( "\n" );

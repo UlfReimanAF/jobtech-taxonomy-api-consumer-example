@@ -19,17 +19,17 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /**
- * Response2947
+ * Response2981
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-17T13:00:54.439+02:00")
-public class Response2947 {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T10:19:50.664+02:00")
+public class Response2981 {
     @JsonProperty("type")
     private String type = null;
 
     @JsonProperty("message")
     private String message = null;
 
-    public Response2947 type( String type ) {
+    public Response2981 type( String type ) {
         this.type = type;
         return this;
     }
@@ -48,7 +48,7 @@ public class Response2947 {
         this.type = type;
     }
 
-    public Response2947 message( String message ) {
+    public Response2981 message( String message ) {
         this.message = message;
         return this;
     }
@@ -76,9 +76,9 @@ public class Response2947 {
         if (o == null || getClass( ) != o.getClass( )) {
             return false;
         }
-        Response2947 response2947 = (Response2947) o;
-        return Objects.equals( this.type, response2947.type ) &&
-                Objects.equals( this.message, response2947.message );
+        Response2981 response2981 = (Response2981) o;
+        return Objects.equals( this.type, response2981.type ) &&
+                Objects.equals( this.message, response2981.message );
     }
 
     @Override
@@ -90,7 +90,7 @@ public class Response2947 {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder( );
-        sb.append( "class Response2947 {\n" );
+        sb.append( "class Response2981 {\n" );
 
         sb.append( "    type: " ).append( toIndentedString( type ) ).append( "\n" );
         sb.append( "    message: " ).append( toIndentedString( message ) ).append( "\n" );
