@@ -13,10 +13,9 @@
 
 package se.jobtech.taxonomy.client.api;
 
+import org.junit.Ignore;
 import org.junit.Test;
-import se.jobtech.taxonomy.client.model.Response2976;
-import se.jobtech.taxonomy.client.model.Response2978;
-import se.jobtech.taxonomy.client.model.Response2980;
+import se.jobtech.taxonomy.client.model.*;
 
 import java.util.List;
 
@@ -41,9 +40,9 @@ public class PublicApiTest {
         String fromDateTime = "2018-08-08 14:00:00";
         Long offset = null;
         Long limit = null;
-        List<Response2976> response = api.v0TaxonomyPublicChangesGet( fromDateTime, offset, limit );
+        List<Response2992> response = api.v0TaxonomyPublicChangesGet( fromDateTime, offset, limit );
 
-        assertNotNull( response );
+        // TODO: test validations
     }
 
     /**
@@ -55,7 +54,7 @@ public class PublicApiTest {
     public void v0TaxonomyPublicConceptTypesGetTest() {
         List<String> response = api.v0TaxonomyPublicConceptTypesGet( );
 
-
+        assertNotNull( response );
     }
 
     /**
@@ -71,9 +70,9 @@ public class PublicApiTest {
         Boolean deprecated = false;
         Long offset = null;
         Long limit = null;
-        List<Response2978> response = api.v0TaxonomyPublicConceptsGet( id, preferredLabel, type, deprecated, offset, limit );
-
+        List<Response2994> response = api.v0TaxonomyPublicConceptsGet( id, preferredLabel, type, deprecated, offset, limit );
         assertNotNull( response );
+
     }
 
     /**
@@ -86,7 +85,7 @@ public class PublicApiTest {
         String dateTime = null;
         ERRORUNKNOWN response = api.v0TaxonomyPublicDeprecatedConceptHistorySinceGet( dateTime );
 
-        // TODO: test validations
+
     }
 
     /**
@@ -100,7 +99,7 @@ public class PublicApiTest {
         String type = "skill";
         Long offset = 0L;
         Long limit = 1L;
-        List<Response2980> response = api.v0TaxonomyPublicSearchGet( q, type, offset, limit );
+        List<Response2996> response = api.v0TaxonomyPublicSearchGet( q, type, offset, limit );
 
         assertNotNull( response );
     }
@@ -111,13 +110,13 @@ public class PublicApiTest {
         for (int i = 0; i < 50; i++) {
             char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
             for (char c : alphabet) {
-                List<Response2980> responseS = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "skill", null, null );
-                List<Response2980> responseOn = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "occupation-name", null, null );
-                List<Response2980> responseOg = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "occupation-group", null, null );
-                List<Response2980> responseOf = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "occupation-field", null, null );
-                List<Response2980> responseD = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "driving-license", null, null );
-                List<Response2980> responseSH = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "skill-headline", null, null );
-                List<Response2980> responseL = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "language", null, null );
+                List<Response2996> responseS = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "skill", null, null );
+                List<Response2996> responseOn = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "occupation-name", null, null );
+                List<Response2996> responseOg = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "occupation-group", null, null );
+                List<Response2996> responseOf = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "occupation-field", null, null );
+                List<Response2996> responseD = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "driving-license", null, null );
+                List<Response2996> responseSH = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "skill-headline", null, null );
+                List<Response2996> responseL = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "language", null, null );
                 assertNotNull( responseS );
                 assertNotNull( responseOn );
                 assertNotNull( responseOg );
@@ -125,13 +124,10 @@ public class PublicApiTest {
                 assertNotNull( responseD );
                 assertNotNull( responseSH );
                 assertNotNull( responseL );
+
+
             }
 
         }
-
-
-        //   assertNotNull( responseS );
     }
-
-
 }
