@@ -15,7 +15,7 @@ package se.jobtech.taxonomy.client.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
+
 
 import java.util.Objects;
 
@@ -31,7 +31,7 @@ public class Response2992 {
     private Long transactionId = null;
 
     @JsonProperty("timestamp")
-    private OffsetDateTime timestamp = null;
+    private String timestamp = null;
 
     @JsonProperty("concept")
     private Response2992Concept concept = null;
@@ -74,7 +74,7 @@ public class Response2992 {
         this.transactionId = transactionId;
     }
 
-    public Response2992 timestamp( OffsetDateTime timestamp ) {
+    public Response2992 timestamp( String timestamp ) {
         this.timestamp = timestamp;
         return this;
     }
@@ -85,11 +85,11 @@ public class Response2992 {
      * @return timestamp
      **/
     @ApiModelProperty(required = true, value = "")
-    public OffsetDateTime getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp( OffsetDateTime timestamp ) {
+    public void setTimestamp( String timestamp ) {
         this.timestamp = timestamp;
     }
 
