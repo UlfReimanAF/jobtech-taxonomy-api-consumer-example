@@ -15,7 +15,9 @@ package se.jobtech.taxonomy.client.api;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import se.jobtech.taxonomy.client.model.*;
+import se.jobtech.taxonomy.client.model.Response2992;
+import se.jobtech.taxonomy.client.model.Response2994;
+import se.jobtech.taxonomy.client.model.Response2996;
 
 import java.util.List;
 
@@ -42,7 +44,7 @@ public class PublicApiTest {
         Long limit = null;
         List<Response2992> response = api.v0TaxonomyPublicChangesGet( fromDateTime, offset, limit );
 
-        // TODO: test validations
+        assertNotNull( response );
     }
 
     /**
@@ -53,8 +55,9 @@ public class PublicApiTest {
     @Test
     public void v0TaxonomyPublicConceptTypesGetTest() {
         List<String> response = api.v0TaxonomyPublicConceptTypesGet( );
-
         assertNotNull( response );
+
+
     }
 
     /**
@@ -73,6 +76,7 @@ public class PublicApiTest {
         List<Response2994> response = api.v0TaxonomyPublicConceptsGet( id, preferredLabel, type, deprecated, offset, limit );
         assertNotNull( response );
 
+
     }
 
     /**
@@ -80,12 +84,12 @@ public class PublicApiTest {
      *
      * @throws Exception if the Api call fails
      */
-    // @Test
+    //@Test
     public void v0TaxonomyPublicDeprecatedConceptHistorySinceGetTest() {
         String dateTime = null;
         ERRORUNKNOWN response = api.v0TaxonomyPublicDeprecatedConceptHistorySinceGet( dateTime );
 
-
+        // TODO: test validations
     }
 
     /**
@@ -105,7 +109,7 @@ public class PublicApiTest {
     }
 
 
-    @Test
+    //  @Test
     public void v0TaxonomyPublicSearchLoadTest() {
         for (int i = 0; i < 50; i++) {
             char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
@@ -125,9 +129,8 @@ public class PublicApiTest {
                 assertNotNull( responseSH );
                 assertNotNull( responseL );
 
-
             }
-
         }
     }
 }
+

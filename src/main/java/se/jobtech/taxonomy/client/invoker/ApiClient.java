@@ -43,8 +43,6 @@ public class ApiClient {
     private HttpHeaders defaultHeaders = new HttpHeaders( );
     //   private String basePath = "http://localhost:3000";
     private String basePath = "http://jobtech-taxonomy-api.dev.services.jtech.se";
-
-    //   private String basePath = "https://localhost";
     private RestTemplate restTemplate;
     private Map<String, Authentication> authentications;
     private HttpStatus statusCode;
@@ -508,7 +506,6 @@ public class ApiClient {
         }
 
         headerParams.add( "api-key", "2f904e245c1f5" );
-
         addHeadersToRequest( headerParams, requestBuilder );
         addHeadersToRequest( defaultHeaders, requestBuilder );
 

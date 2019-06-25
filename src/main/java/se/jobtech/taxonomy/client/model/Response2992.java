@@ -16,7 +16,6 @@ package se.jobtech.taxonomy.client.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
 
-
 import java.util.Objects;
 
 /**
