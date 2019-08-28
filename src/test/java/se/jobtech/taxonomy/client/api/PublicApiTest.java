@@ -137,9 +137,9 @@ public class PublicApiTest {
      * @throws Exception
      *          if the Api call fails
      */
-   // @Test
+    @Test
     public void v0TaxonomyPublicSearchLoadTest() {
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 1; i++) {
             char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
             for (char c : alphabet) {
                 List<Response3168> responseS = api.v0TaxonomyPublicSearchGet( String.valueOf( c ), "skill", null, null,2L );
