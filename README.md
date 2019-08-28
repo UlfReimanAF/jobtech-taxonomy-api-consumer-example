@@ -2,7 +2,7 @@
 
 Jobtech Taxonomy
 - API version: 0.9.0
-  - Build date: 2019-06-24T11:20:52.800+02:00
+  - Build date: 2019-08-27T11:15:31.744+02:00
 
 Jobtech taxonomy services
 
@@ -87,8 +87,9 @@ public class PrivateApiExample {
         PrivateApi apiInstance = new PrivateApi();
         String id = "id_example"; // String | 
         try {
-            apiInstance.v0TaxonomyPrivateConceptDelete(id);
-        } catch (ApiException e) {
+            Response3176 result = apiInstance.v0TaxonomyPrivateConceptDelete(id);
+            System.out.println(result);
+        } catch (Exception e) {
             System.err.println("Exception when calling PrivateApi#v0TaxonomyPrivateConceptDelete");
             e.printStackTrace();
         }
@@ -109,27 +110,44 @@ Class | Method | HTTP request | Description
 *PrivateApi* | [**v0TaxonomyPrivateRelationGraphRelationTypeIdGet**](docs/PrivateApi.md#v0TaxonomyPrivateRelationGraphRelationTypeIdGet) | **GET** /v0/taxonomy/private/relation/graph/{relation-type}/{id} | Relation graphs.
 *PrivateApi* | [**v0TaxonomyPrivateRelationTypesGet**](docs/PrivateApi.md#v0TaxonomyPrivateRelationTypesGet) | **GET** /v0/taxonomy/private/relation/types | Relation graphs.
 *PrivateApi* | [**v0TaxonomyPrivateReplaceConceptPost**](docs/PrivateApi.md#v0TaxonomyPrivateReplaceConceptPost) | **POST** /v0/taxonomy/private/replace-concept | Replace old concept with a new concept.
-*PublicApi* | [**v0TaxonomyPublicChangesGet**](docs/PublicApi.md#v0TaxonomyPublicChangesGet) | **GET** /v0/taxonomy/public/changes | Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
+*PrivateApi* | [**v0TaxonomyPrivateVersionsPost**](docs/PrivateApi.md#v0TaxonomyPrivateVersionsPost) | **POST** /v0/taxonomy/private/versions | Creates a new version tag in the database.
+*PublicApi* | [**v0TaxonomyPublicChangesGet**](docs/PublicApi.md#v0TaxonomyPublicChangesGet) | **GET** /v0/taxonomy/public/changes | Show the history from a given version.
 *PublicApi* | [**v0TaxonomyPublicConceptTypesGet**](docs/PublicApi.md#v0TaxonomyPublicConceptTypesGet) | **GET** /v0/taxonomy/public/concept/types | Return a list of all taxonomy types.
 *PublicApi* | [**v0TaxonomyPublicConceptsGet**](docs/PublicApi.md#v0TaxonomyPublicConceptsGet) | **GET** /v0/taxonomy/public/concepts | Get concepts.
-*PublicApi* | [**v0TaxonomyPublicDeprecatedConceptHistorySinceGet**](docs/PublicApi.md#v0TaxonomyPublicDeprecatedConceptHistorySinceGet) | **GET** /v0/taxonomy/public/deprecated-concept-history-since | Show the history since the given date. Use the format yyyy-MM-dd HH:mm:ss (i.e. 2017-06-09 14:30:01).
-*PublicApi* | [**v0TaxonomyPublicSearchGet**](docs/PublicApi.md#v0TaxonomyPublicSearchGet) | **GET** /v0/taxonomy/public/search | get concepts by part of string
+*PublicApi* | [**v0TaxonomyPublicParseTextPost**](docs/PublicApi.md#v0TaxonomyPublicParseTextPost) | **POST** /v0/taxonomy/public/parse-text | Finds all concepts in a text.
+*PublicApi* | [**v0TaxonomyPublicReplacedByChangesGet**](docs/PublicApi.md#v0TaxonomyPublicReplacedByChangesGet) | **GET** /v0/taxonomy/public/replaced-by-changes | Show the history of concepts being replaced from a given version.
+*PublicApi* | [**v0TaxonomyPublicSearchGet**](docs/PublicApi.md#v0TaxonomyPublicSearchGet) | **GET** /v0/taxonomy/public/search | Autocomplete from query string
+*PublicApi* | [**v0TaxonomyPublicVersionsGet**](docs/PublicApi.md#v0TaxonomyPublicVersionsGet) | **GET** /v0/taxonomy/public/versions | Return a list of all Taxonomy versions.
 
 
 ## Documentation for Models
 
- - [Response2992](docs/Response2992.md)
- - [Response2992Concept](docs/Response2992Concept.md)
- - [Response2993](docs/Response2993.md)
- - [Response2994](docs/Response2994.md)
- - [Response2995](docs/Response2995.md)
- - [Response2996](docs/Response2996.md)
- - [Response2997](docs/Response2997.md)
- - [Response2999](docs/Response2999.md)
- - [Response3001](docs/Response3001.md)
- - [Response3003](docs/Response3003.md)
- - [Response3005](docs/Response3005.md)
- - [Response3007](docs/Response3007.md)
+ - [Response3162](docs/Response3162.md)
+ - [Response3163](docs/Response3163.md)
+ - [Response3164](docs/Response3164.md)
+ - [Response3164Concept](docs/Response3164Concept.md)
+ - [Response3165](docs/Response3165.md)
+ - [Response3166](docs/Response3166.md)
+ - [Response3166ReplacedBy](docs/Response3166ReplacedBy.md)
+ - [Response3167](docs/Response3167.md)
+ - [Response3168](docs/Response3168.md)
+ - [Response3169](docs/Response3169.md)
+ - [Response3171](docs/Response3171.md)
+ - [Response3173](docs/Response3173.md)
+ - [Response3175](docs/Response3175.md)
+ - [Response3176](docs/Response3176.md)
+ - [Response3177](docs/Response3177.md)
+ - [Response3178](docs/Response3178.md)
+ - [Response3179](docs/Response3179.md)
+ - [Response3179Concept](docs/Response3179Concept.md)
+ - [Response3179ConceptReplacedBy](docs/Response3179ConceptReplacedBy.md)
+ - [Response3180](docs/Response3180.md)
+ - [Response3181](docs/Response3181.md)
+ - [Response3182](docs/Response3182.md)
+ - [Response3183](docs/Response3183.md)
+ - [Response3185](docs/Response3185.md)
+ - [Response3187](docs/Response3187.md)
+ - [Response3189](docs/Response3189.md)
 
 
 ## Documentation for Authorization

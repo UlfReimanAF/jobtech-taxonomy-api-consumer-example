@@ -10,26 +10,28 @@ Method | HTTP request | Description
 [**v0TaxonomyPrivateRelationGraphRelationTypeIdGet**](PrivateApi.md#v0TaxonomyPrivateRelationGraphRelationTypeIdGet) | **GET** /v0/taxonomy/private/relation/graph/{relation-type}/{id} | Relation graphs.
 [**v0TaxonomyPrivateRelationTypesGet**](PrivateApi.md#v0TaxonomyPrivateRelationTypesGet) | **GET** /v0/taxonomy/private/relation/types | Relation graphs.
 [**v0TaxonomyPrivateReplaceConceptPost**](PrivateApi.md#v0TaxonomyPrivateReplaceConceptPost) | **POST** /v0/taxonomy/private/replace-concept | Replace old concept with a new concept.
+[**v0TaxonomyPrivateVersionsPost**](PrivateApi.md#v0TaxonomyPrivateVersionsPost) | **POST** /v0/taxonomy/private/versions | Creates a new version tag in the database.
 
 
 <a name="v0TaxonomyPrivateConceptDelete"></a>
 # **v0TaxonomyPrivateConceptDelete**
-> v0TaxonomyPrivateConceptDelete(id)
+> Response3176 v0TaxonomyPrivateConceptDelete(id)
 
 Retract the concept with the given ID.
 
 ### Example
 ```java
 // Import classes:
-//import se.jobtech.taxonomy.client.invoker.ApiException;
+//import se.jobtech.taxonomy.client.invoker.Exception;
 //import se.jobtech.taxonomy.client.api.PrivateApi;
 
 
 PrivateApi apiInstance = new PrivateApi();
 String id = "id_example"; // String | 
 try {
-    apiInstance.v0TaxonomyPrivateConceptDelete(id);
-} catch (ApiException e) {
+    Response3176 result = apiInstance.v0TaxonomyPrivateConceptDelete(id);
+    System.out.println(result);
+} catch (Exception e) {
     System.err.println("Exception when calling PrivateApi#v0TaxonomyPrivateConceptDelete");
     e.printStackTrace();
 }
@@ -43,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**Response3176**](Response3176.md)
 
 ### Authorization
 
@@ -56,24 +58,25 @@ No authorization required
 
 <a name="v0TaxonomyPrivateConceptPost"></a>
 # **v0TaxonomyPrivateConceptPost**
-> v0TaxonomyPrivateConceptPost(type, description, preferredTerm)
+> Response3179 v0TaxonomyPrivateConceptPost(type, definition, preferredLabel)
 
 Assert a new concept.
 
 ### Example
 ```java
 // Import classes:
-//import se.jobtech.taxonomy.client.invoker.ApiException;
+//import se.jobtech.taxonomy.client.invoker.Exception;
 //import se.jobtech.taxonomy.client.api.PrivateApi;
 
 
 PrivateApi apiInstance = new PrivateApi();
 String type = "type_example"; // String | 
-String description = "description_example"; // String | 
-String preferredTerm = "preferredTerm_example"; // String | 
+String definition = "definition_example"; // String | 
+String preferredLabel = "preferredLabel_example"; // String | 
 try {
-    apiInstance.v0TaxonomyPrivateConceptPost(type, description, preferredTerm);
-} catch (ApiException e) {
+    Response3179 result = apiInstance.v0TaxonomyPrivateConceptPost(type, definition, preferredLabel);
+    System.out.println(result);
+} catch (Exception e) {
     System.err.println("Exception when calling PrivateApi#v0TaxonomyPrivateConceptPost");
     e.printStackTrace();
 }
@@ -84,12 +87,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **type** | **String**|  |
- **description** | **String**|  |
- **preferredTerm** | **String**|  |
+ **definition** | **String**|  |
+ **preferredLabel** | **String**|  |
 
 ### Return type
 
-null (empty response body)
+[**Response3179**](Response3179.md)
 
 ### Authorization
 
@@ -109,7 +112,7 @@ Relation graphs.
 ### Example
 ```java
 // Import classes:
-//import se.jobtech.taxonomy.client.invoker.ApiException;
+//import se.jobtech.taxonomy.client.invoker.Exception;
 //import se.jobtech.taxonomy.client.api.PrivateApi;
 
 
@@ -118,7 +121,7 @@ String relationType = "relationType_example"; // String |
 try {
     ERRORUNKNOWN result = apiInstance.v0TaxonomyPrivateRelationGraphRelationTypeGet(relationType);
     System.out.println(result);
-} catch (ApiException e) {
+} catch (Exception e) {
     System.err.println("Exception when calling PrivateApi#v0TaxonomyPrivateRelationGraphRelationTypeGet");
     e.printStackTrace();
 }
@@ -152,7 +155,7 @@ Relation graphs.
 ### Example
 ```java
 // Import classes:
-//import se.jobtech.taxonomy.client.invoker.ApiException;
+//import se.jobtech.taxonomy.client.invoker.Exception;
 //import se.jobtech.taxonomy.client.api.PrivateApi;
 
 
@@ -162,7 +165,7 @@ String id = "id_example"; // String |
 try {
     ERRORUNKNOWN result = apiInstance.v0TaxonomyPrivateRelationGraphRelationTypeIdGet(relationType, id);
     System.out.println(result);
-} catch (ApiException e) {
+} catch (Exception e) {
     System.err.println("Exception when calling PrivateApi#v0TaxonomyPrivateRelationGraphRelationTypeIdGet");
     e.printStackTrace();
 }
@@ -197,7 +200,7 @@ Relation graphs.
 ### Example
 ```java
 // Import classes:
-//import se.jobtech.taxonomy.client.invoker.ApiException;
+//import se.jobtech.taxonomy.client.invoker.Exception;
 //import se.jobtech.taxonomy.client.api.PrivateApi;
 
 
@@ -205,7 +208,7 @@ PrivateApi apiInstance = new PrivateApi();
 try {
     ERRORUNKNOWN result = apiInstance.v0TaxonomyPrivateRelationTypesGet();
     System.out.println(result);
-} catch (ApiException e) {
+} catch (Exception e) {
     System.err.println("Exception when calling PrivateApi#v0TaxonomyPrivateRelationTypesGet");
     e.printStackTrace();
 }
@@ -236,7 +239,7 @@ Replace old concept with a new concept.
 ### Example
 ```java
 // Import classes:
-//import se.jobtech.taxonomy.client.invoker.ApiException;
+//import se.jobtech.taxonomy.client.invoker.Exception;
 //import se.jobtech.taxonomy.client.api.PrivateApi;
 
 
@@ -245,7 +248,7 @@ String oldConceptId = "oldConceptId_example"; // String |
 String newConceptId = "newConceptId_example"; // String | 
 try {
     apiInstance.v0TaxonomyPrivateReplaceConceptPost(oldConceptId, newConceptId);
-} catch (ApiException e) {
+} catch (Exception e) {
     System.err.println("Exception when calling PrivateApi#v0TaxonomyPrivateReplaceConceptPost");
     e.printStackTrace();
 }
@@ -261,6 +264,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/transit+msgpack, application/transit+json, application/edn
+ - **Accept**: application/json, application/transit+msgpack, application/transit+json, application/edn
+
+<a name="v0TaxonomyPrivateVersionsPost"></a>
+# **v0TaxonomyPrivateVersionsPost**
+> Response3182 v0TaxonomyPrivateVersionsPost(newVersionId)
+
+Creates a new version tag in the database.
+
+### Example
+```java
+// Import classes:
+//import se.jobtech.taxonomy.client.invoker.Exception;
+//import se.jobtech.taxonomy.client.api.PrivateApi;
+
+
+PrivateApi apiInstance = new PrivateApi();
+Long newVersionId = 789L; // Long | 
+try {
+    Response3182 result = apiInstance.v0TaxonomyPrivateVersionsPost(newVersionId);
+    System.out.println(result);
+} catch (Exception e) {
+    System.err.println("Exception when calling PrivateApi#v0TaxonomyPrivateVersionsPost");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **newVersionId** | **Long**|  |
+
+### Return type
+
+[**Response3182**](Response3182.md)
 
 ### Authorization
 

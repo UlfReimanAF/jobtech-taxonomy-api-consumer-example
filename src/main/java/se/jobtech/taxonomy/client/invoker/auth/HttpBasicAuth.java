@@ -1,12 +1,13 @@
 package se.jobtech.taxonomy.client.invoker.auth;
 
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
+
 import org.springframework.http.HttpHeaders;
 import org.springframework.util.Base64Utils;
 import org.springframework.util.MultiValueMap;
 
-import java.nio.charset.StandardCharsets;
-
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-24T11:20:52.800+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-27T11:15:31.744+02:00")
 public class HttpBasicAuth implements Authentication {
     private String username;
     private String password;
@@ -15,7 +16,7 @@ public class HttpBasicAuth implements Authentication {
         return username;
     }
 
-    public void setUsername( String username ) {
+    public void setUsername(String username) {
         this.username = username;
     }
 
@@ -23,16 +24,16 @@ public class HttpBasicAuth implements Authentication {
         return password;
     }
 
-    public void setPassword( String password ) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
     @Override
-    public void applyToParams( MultiValueMap<String, String> queryParams, HttpHeaders headerParams ) {
+    public void applyToParams(MultiValueMap<String, String> queryParams, HttpHeaders headerParams) {
         if (username == null && password == null) {
             return;
         }
         String str = (username == null ? "" : username) + ":" + (password == null ? "" : password);
-        headerParams.add( HttpHeaders.AUTHORIZATION, "Basic " + Base64Utils.encodeToString( str.getBytes( StandardCharsets.UTF_8 ) ) );
+        headerParams.add(HttpHeaders.AUTHORIZATION, "Basic " + Base64Utils.encodeToString(str.getBytes(StandardCharsets.UTF_8)));
     }
 }
