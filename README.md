@@ -65,8 +65,7 @@ Then manually install the following JARs:
 
 ## Getting Started
 
-Please follow the [installation](#installation) instruction and execute the following Java code:
-
+Please follow the [installation](#installation) instruction and execute the following Java code.
 ```java
 
 import se.jobtech.taxonomy.client.invoker.*;
